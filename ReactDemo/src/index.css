@@ -18,9 +18,14 @@ body {
   margin: 0;
 }
 
-.App {
-  display: grid;
-  /*grid-template-areas: "Header Header Header"
-                        ". Skills ."
-                        "Footer Footer Footer";^*/
+h2 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+ul {
+  font-size: 1.3em;
 }

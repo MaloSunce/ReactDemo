@@ -1,6 +1,36 @@
-.Skills{
-    list-style: square;
-    columns: 3;
-    WebkitColumns: 3;
-    MozColumns: 3;
+.Skills {
+    display: grid;
+    grid-template-areas:
+        "Title Title Title"
+        "Subtitles Subtitles Subtitles"
+        "SkillList SkillList SkillList";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 4fr;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    border: 5px solid red;
+}
+
+.Title {
+    grid-area: Title;
+    border: 5px solid greenyellow;
+}
+
+.Subtitles {
+    grid-area: Subtitles;
+    background-color: blue;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 66%;
+    justify-self: center;
+}
+
+.SkillLists {
+    grid-area: SkillList;
+    background-color: orangered;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 66%;
+    justify-self: center;
 }

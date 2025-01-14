@@ -7,11 +7,25 @@ function Skills() {
 
     return (
         <div className="Skills">
-            <ul>
-                {backend.map(skill => <li key={skill}>{skill}</li>)}
-                {frontend.map(skill => <li key={skill}>{skill}</li>)}
-                {other.map(skill => <li key={skill}>{skill}</li>)}
-            </ul>
+            <h2 className="Title">Skills</h2>
+
+            <div className="Subtitles">
+                <h3>Back-end</h3>
+                <h3>Front-end</h3>
+                <h3>Other</h3>
+            </div>
+
+            <div className="SkillLists">
+                <ul className="SkillList">
+                    {backend.map(skill => <li key={skill}>{skill}</li>)}
+                </ul>
+                <ul className="SkillList">
+                    {frontend.map(skill => <li key={skill}>{skill}</li>)}
+                </ul>
+                <ul className="SkillList">
+                    {other.map(skill => <li key={skill}>{skill}</li>)}
+                </ul>
+            </div>
         </div>
     );
 }
