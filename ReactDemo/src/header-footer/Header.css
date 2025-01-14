@@ -1,9 +1,10 @@
 .Header {
     display: grid;
     grid-template-areas: "logo nav";
-    padding-left: 20px;
+    align-items: start;
+    padding-left: 40px;
     padding-right: 20px;
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/clouds.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../assets/clouds.jpg');
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -11,17 +12,32 @@
 
 h1 {
     grid-area: logo;
-    padding: 1%;
+    font-size: 3em;
+    margin-top: 0.4em;
 }
 
 .Nav {
     grid-area: nav;
     display: grid;
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(7, auto);
+    padding-top: 2.5em;
+    align-items: center;
     float: right;
-    padding: 5%;
+}
+
+.Logo {
+    justify-self: center;
+    width: 20em;
+    height: auto;
+    margin-left: 100%;
+}
+
+.LinkLogo {
+    width: 2.5em;
+    height: auto;
 }
 
 a {
     text-decoration: none;
+    color: white;
 }
