@@ -15,18 +15,18 @@ function Header() {
                 <a href="#">Classes</a>
                 <a href="#">Contact</a>
 
-                <div className="LogoContainer">
+                <div className="IconContainer">
                     <a href="https://github.com/MaloSunce?tab=repositories">
-                        <img className="LinkLogo" src={GitHubLogo} alt="GitHub logo"></img>
+                        <img className="Icons" src={GitHubLogo} alt="GitHub logo"></img>
                         {/*<dir className="Logo"><img src="../assets/sun.png" alt="Sun Icon"> </img></dir>*/}
                     </a>
                     <a href="https://www.linkedin.com/in/sara-djordjevic-2b0ab925b/">
-                        <img className="LinkLogo" src={LinkedInLogo} alt="LinkedIn logo"></img>
+                        <img className="Icons" src={LinkedInLogo} alt="LinkedIn logo"></img>
                         {/*<a href="https://www.flaticon.com/free-icons/brightness" title="brightness icons">Brightness icons created by Cap Cool - Flaticon</a>*/}
                     </a>
                 </div>
             </nav>
-            <img className="Logo" src={SunLogo} alt="Sun logo"></img>
+            <img className="SunLogo" src={SunLogo} alt="Sun logo" style={{width: '22em', height: 'auto'}}/>
         </header>
     );
 }
