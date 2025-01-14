@@ -35,10 +35,10 @@ h1 {
 
 .LogoContainer {
     display: flex;
-    gap: 1.5em;
+    gap: 1.7em;
 }
 
 .LinkLogo {
-    width: 2.5em;
+    width: 2.3em;
     height: auto;
 }
