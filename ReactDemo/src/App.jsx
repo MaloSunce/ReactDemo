@@ -1,6 +1,6 @@
-import Header from './Header.jsx'
-import Footer from './Footer.jsx'
-import Skills from './Skills.jsx'
+import Header from './header-footer/Header.jsx'
+import Footer from './header-footer/Footer.jsx'
+import Skills from './content/Skills.jsx'
 function App() {
     return (
         <>

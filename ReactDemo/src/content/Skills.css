@@ -1,0 +1,6 @@
+.Skills{
+    list-style: square;
+    columns: 3;
+    WebkitColumns: 3;
+    MozColumns: 3;
+}
