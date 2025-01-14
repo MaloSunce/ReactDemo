@@ -6,8 +6,10 @@
     background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../assets/clouds.jpg');
     height: 100vh;
     width: 100%;
-    background-size: cover;
+    background-attachment: fixed;
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1 {
@@ -44,5 +46,3 @@ h1 {
     align-items: center;
     justify-self: center;
 }
-
-

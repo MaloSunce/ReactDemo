@@ -2,6 +2,7 @@ import "./Header.css"
 import GitHubLogo from '../assets/github.png'
 import LinkedInLogo from '../assets/linkedin.png'
 import SunLogo from '../assets/sun.png'
+import SunLogoBlack from '../assets/sun_black.png'
 
 function Header() {
 
@@ -27,6 +28,7 @@ function Header() {
                 </div>
             </nav>
             <img className="SunLogo" src={SunLogo} alt="Sun logo" style={{width: '22em', height: 'auto'}}/>
+            {/*<a href="https://www.flaticon.com/free-icons/brightness" title="brightness icons">Brightness icons created by Cap Cool - Flaticon</a>*/}
         </header>
     );
 }

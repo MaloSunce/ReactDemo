@@ -40,3 +40,20 @@ a {
   text-decoration: none;
   color: white;
 }
+
+.ToTopIcon {
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.ToTopIcon.visible {
+  opacity: 1;
+}
+.ToTopIcon img {
+  width: 7em;
+  height: auto;
+}
