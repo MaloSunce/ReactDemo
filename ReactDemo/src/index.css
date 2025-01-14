@@ -28,4 +28,9 @@ h3 {
 
 ul {
   font-size: 1.3em;
+  list-style-type: none;
+}
+
+li {
+  margin: 10px 0;
 }

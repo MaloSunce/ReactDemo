@@ -1,9 +1,9 @@
 import './Skills.css'
 
 function Skills() {
-    const backend = ["Kotlin", "C/C++", "Golang", "Python", "Dart"]
-    const frontend = ["JavaScript", "HTML", "CSS", "React"]
-    const other = ["Git", "SQL", "GCP", "Linux", "Windows", "Android"]
+    const backend = ["Kotlin", "C/C++", "Golang", "Python", "Dart", "SQL"]
+    const frontend = ["React", "JavaScript", "HTML", "CSS", "Jetpack Compose", "Flutter"]
+    const other = ["Git", "GCP", "MongoDB", "Linux", "Windows", "Android"]
 
     return (
         <div className="Skills">
