@@ -3,7 +3,6 @@
     grid-template-areas: "logo nav";
     align-items: start;
     padding-left: 40px;
-    padding-right: 20px;
     background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../assets/clouds.jpg');
     height: 100vh;
     /*width: 100vw;*/
@@ -23,6 +22,7 @@ h1 {
     grid-template-columns: repeat(7, auto);
     padding-top: 2.5em;
     align-items: center;
+    justify-items: right;
     float: right;
 }
 
@@ -33,12 +33,12 @@ h1 {
     margin-left: 100%;
 }
 
+.LogoContainer {
+    display: flex;
+    gap: 1.5em;
+}
+
 .LinkLogo {
     width: 2.5em;
     height: auto;
-}
-
-a {
-    text-decoration: none;
-    color: white;
 }

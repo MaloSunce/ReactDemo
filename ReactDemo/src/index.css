@@ -13,6 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html { scroll-behavior: smooth;}
 
 body {
   margin: 0;
@@ -33,4 +34,9 @@ ul {
 
 li {
   margin: 10px 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }

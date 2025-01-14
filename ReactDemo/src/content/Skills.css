@@ -17,6 +17,13 @@
 
 .Subtitles {
     grid-area: Subtitles;
+}
+
+.SkillLists {
+    grid-area: SkillList;
+}
+
+.Subtitles, .SkillLists {
     background-color: #6d6d6d;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -25,15 +32,4 @@
     border-radius: 1em;
     box-shadow: 5px 5px 5px hsl(0, 0%, 0%, 10%);
     margin-bottom: 10px;
-}
-
-.SkillLists {
-    grid-area: SkillList;
-    background-color: #6d6d6d;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 66%;
-    justify-self: center;
-    border-radius: 1em;
-    box-shadow: 5px 5px 5px hsl(0, 0%, 0%, 10%);
 }

@@ -6,7 +6,7 @@ function Skills() {
     const other = ["Git", "GCP", "MongoDB", "Linux", "Windows", "Android"]
 
     return (
-        <div className="Skills">
+        <div className="Skills" id="Skills">
             <h2 className="Title">Skills</h2>
 
             <div className="Subtitles">
