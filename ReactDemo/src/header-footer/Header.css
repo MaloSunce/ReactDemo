@@ -1,17 +1,27 @@
 .Header {
     display: grid;
     grid-template-areas: "logo nav";
+    padding-left: 20px;
+    padding-right: 20px;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/clouds.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
 }
 
 h1 {
     grid-area: logo;
+    padding: 1%;
 }
 
 .Nav {
     grid-area: nav;
     display: grid;
-    padding: 20px;
-    grid-template-columns: repeat(4, auto);
-    align-items: center;
-    justify-items: center;
+    grid-template-columns: repeat(5, auto);
+    float: right;
+    padding: 5%;
+}
+
+a {
+    text-decoration: none;
 }

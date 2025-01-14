@@ -4,7 +4,7 @@ function Skills() {
     const backend = ["Kotlin", "C/C++", "Golang", "Python", "Dart"]
     const frontend = ["JavaScript", "HTML", "CSS", "React"]
     const other = ["Git", "SQL", "GCP", "Linux", "Windows", "Android"]
-    
+
     return (
         <div className="Skills">
             <ul>
