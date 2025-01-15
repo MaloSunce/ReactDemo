@@ -8,13 +8,16 @@ function Header() {
 
     return (
         <header className="Header">
-            <h1><a href="#">MaloSunce</a></h1>
+            <div style={{display: 'flex'}}>
+                <h1><a href="#">MaloSunce</a></h1>
+                <img className="SunLogo" src={SunLogo} alt="Sun logo" style={{width: '2em', height: '2em', paddingTop: '30px'}}/>
+            </div>
             <nav className="Nav">
-                <a href="#">About me</a>
-                <a href="#Skills">Technical skills</a>
-                <a href="#">Software & Design Expertise</a>
-                <a href="#">Projects</a>
-                <a href="#">Contact</a>
+                <a href="#AboutMe">About me</a>
+                <a href="#TechSkills">Technical skills</a>
+                <a href="#DevelSkills">Software & Design Expertise</a>
+                <a href="#Projects">Projects</a>
+                <a href="#Contact">Contact</a>
 
                 <div className="IconContainer">
                     <a href="https://github.com/MaloSunce?tab=repositories" target="_blank">

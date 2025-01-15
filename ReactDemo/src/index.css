@@ -19,7 +19,8 @@
   --background: #242424;
   --text-primary: white;
   --text-secondary: #dedede;
-  --accent: #6d6d6d;
+  --primary-container: #6d6d6d;
+  --accent: #3b4d72;
 }
 
 /* Alternative theme */
