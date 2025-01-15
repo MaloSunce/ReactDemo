@@ -3,20 +3,21 @@ import {useEffect, useState} from "react";
 import Header from './header-footer/Header.jsx'
 import Footer from './header-footer/Footer.jsx'
 import TechSkills from './content/TechSkills.jsx'
+import DevelSkills from './content/DevelSkills.jsx'
 import AboutMe from './content/AboutMe.jsx'
 import Projects from "./content/Projects.jsx";
-
-import ToTopIcon from "./assets/sun_white.png";
+import Contact from "./content/Contact.jsx";
 
 import "./index.css"
 
-import ReactDOM from 'react-dom'
+import ToTopIcon from "./assets/sun_white.png";
+
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faUser, faTools, faPencil, faGraduationCap, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faTools, faPencil, faPhone, faComputer } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-library.add(fab, faUser, faTools, faPencil, faGraduationCap, faPhone)
+library.add(fab, faUser, faTools, faPencil, faPhone, faComputer)
 
 function App() {
 
@@ -49,18 +50,20 @@ function App() {
             <div className={`SideMenu ${isVisible ? 'visible' : ''}`}>
                 <a href="#"><img className="ToTopIcon" src={ToTopIcon} alt="Sun logo white"/> </a>
                 <div className="SideMenuBar">
-                    <a href="#TechSkills"><FontAwesomeIcon icon="tools" /></a>
                     <a href="#AboutMe"><FontAwesomeIcon icon="user" /></a>
+                    <a href="#TechSkills"><FontAwesomeIcon icon="tools" /></a>
+                    <a href="#DevelSkills"><FontAwesomeIcon icon="computer" /></a>
                     <a href="#Projects"><FontAwesomeIcon icon="pencil" /></a>
-                    <a href="#"><FontAwesomeIcon icon="graduation-cap" /></a>
-                    <a href="#"><FontAwesomeIcon icon="phone" /></a>
+                    <a href="#Contact"><FontAwesomeIcon icon="phone" /></a>
                 </div>
             </div>
 
             <Header/>
             <AboutMe/>
             <TechSkills/>
+            <DevelSkills/>
             <Projects/>
+            <Contact/>
             <Footer/>
         </div>
     );
