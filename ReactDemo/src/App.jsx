@@ -16,7 +16,7 @@ function App() {
     useEffect(() => {
         const handleScroll = () => {
             // Check scroll position
-            if (window.scrollY > window.innerHeight) {
+            if (window.scrollY > (window.innerHeight - 100)) {
                 setIsVisible(true);
             } else {
                 setIsVisible(false);
@@ -29,12 +29,23 @@ function App() {
         };
     }, []);
 
+    // Event listener on 'hide-menu' click
+    useEffect(() =>  {
+
+        }
+    )
+
     return (
         <div className="App">
 
-            <a href="#" className={`ToTopIcon ${isVisible ? 'visible' : ''}`}>
-                <img src={ToTopIcon} alt="Sun logo black" />
-            </a>
+            <div className={`SideMenu ${isVisible ? 'visible' : ''}`}>
+                <a href="#"><img className="ToTopIcon" src={ToTopIcon} alt="Sun logo white"/> </a>
+                <a href="#">About me</a>
+                <a href="#Skills">Skills</a>
+                <a href="#">Projects</a>
+                <a href="#">Classes</a>
+                <a href="#">Contact</a>
+            </div>
 
             <Header/>
             <Skills/>
