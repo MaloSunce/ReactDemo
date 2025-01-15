@@ -30,6 +30,14 @@ h1 {
     font-size: 1.2em;
 }
 
+.Nav a {
+    transition: transform 0.2s;
+}
+
+.Nav a:hover {
+    transform: scale(1.25);
+}
+
 .IconContainer {
     display: flex;
     gap: 1.7em;

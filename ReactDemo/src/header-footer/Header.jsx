@@ -17,11 +17,11 @@ function Header() {
                 <a href="#">Contact</a>
 
                 <div className="IconContainer">
-                    <a href="https://github.com/MaloSunce?tab=repositories">
+                    <a href="https://github.com/MaloSunce?tab=repositories" target="_blank">
                         <img className="Icons" src={GitHubLogo} alt="GitHub logo"></img>
                         {/*<dir className="Logo"><img src="../assets/sun.png" alt="Sun Icon"> </img></dir>*/}
                     </a>
-                    <a href="https://www.linkedin.com/in/sara-djordjevic-2b0ab925b/">
+                    <a href="https://www.linkedin.com/in/sara-djordjevic-2b0ab925b/" target="_blank">
                         <img className="Icons" src={LinkedInLogo} alt="LinkedIn logo"></img>
                         {/*<a href="https://www.flaticon.com/free-icons/brightness" title="brightness icons">Brightness icons created by Cap Cool - Flaticon</a>*/}
                     </a>

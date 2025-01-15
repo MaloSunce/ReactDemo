@@ -3,6 +3,7 @@ import {useEffect, useState} from "react";
 import Header from './header-footer/Header.jsx'
 import Footer from './header-footer/Footer.jsx'
 import Skills from './content/Skills.jsx'
+import AboutMe from './content/AboutMe.jsx'
 import Projects from "./content/Projects.jsx";
 
 import ToTopIcon from "./assets/sun_white.png";
@@ -49,6 +50,7 @@ function App() {
 
             <Header/>
             <Skills/>
+            <AboutMe/>
             <Projects/>
             <Footer/>
         </div>
