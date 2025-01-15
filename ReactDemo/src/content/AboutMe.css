@@ -9,8 +9,5 @@
     justify-content: center;
     text-align: center;
     height: 100vh;
-}
-
-p {
-    align-self: center;
+    scroll-snap-align: start;
 }
