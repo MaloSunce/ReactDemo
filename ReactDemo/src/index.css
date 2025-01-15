@@ -5,17 +5,37 @@
 
   scroll-snap-type: y mandatory;
 
+  /*
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #242424;*/
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Default theme */
+  --background: #242424;
+  --text-primary: white;
+  --text-secondary: #dedede;
+  --accent: #6d6d6d;
+}
+
+/* Alternative theme */
+[data-theme='dark'] {
+  --background: black;
+  --text-primary: white;
+  --text-secondary: grey;
+  --accent: darkred;
 }
 
 html { scroll-behavior: smooth;}
+
+.App {
+  color: var(--text-primary);
+  background-color: var(--background);
+}
 
 body {
   margin: 0;

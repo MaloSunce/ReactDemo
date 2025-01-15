@@ -25,7 +25,7 @@
 }
 
 .Subtitles, .SkillLists {
-    background-color: #6d6d6d;
+    background-color: var(--accent);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 66%;
