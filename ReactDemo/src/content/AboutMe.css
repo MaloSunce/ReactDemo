@@ -1,13 +1,40 @@
 .AboutMe {
     display: grid;
     grid-template-areas:
-        "Title Title Title"
-        "Subtitles Subtitles Subtitles"
-        "SkillList SkillList SkillList";
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr 1fr;
-    justify-content: center;
+        "Title"
+        "Disclaimer"
+        "Image"
+        "Descripition";
+    grid-template-rows: 0.2fr 0.3fr 1fr 1fr;
+    justify-items: center;
     text-align: center;
     height: 100vh;
     scroll-snap-align: start;
+    margin: auto;
+}
+
+.Disclaimer {
+    margin: 0;
+    grid-area: Disclaimer;
+    font-size: 1.5em;
+}
+
+.AboutMe .Title {
+    grid-area: Title;
+}
+
+.Image {
+    grid-area: Image;
+}
+
+.AboutMe img {
+    max-width: 100%;
+    height: 350px;
+    width: auto;
+    justify-content: start;
+}
+
+.AboutMe .Description {
+    grid-area: Descripition;
+    width: 70%;
 }

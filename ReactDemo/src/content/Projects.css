@@ -1,10 +1,10 @@
 .Projects {
     height: 100vh;
-    scroll-snap-align: start;
     justify-content: center;
     text-align: center;
-    margin: auto;
     width: 75%;
+    margin: auto;
+    scroll-snap-align: start;
 }
 
 img {
@@ -26,11 +26,10 @@ img {
     margin: 0 10px;
 }
 
-.CardContent {
+.CardInfo {
     display: flex;
     flex-direction: column;
     justify-items: center;
     gap: 4%;
     padding: 4%;
-
 }

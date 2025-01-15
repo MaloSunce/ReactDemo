@@ -44,23 +44,21 @@ function Projects() {
 
     return (
         <div className="Projects" id="Projects">
-            <div className="mt-20">
-                <h2 className="Title">Projects</h2>
-                <Slider {...settings}>
-                    {cardItems.map((d) => (
-                        <div className="Card">
-                            <div>
-                                <img src={SunLogo} alt="Placeholder image"></img>
-                            </div>
-                            <div className="CardContent">
-                                <h3>{d.title}</h3>
-                                <p>{d.description}</p>
-                                <button>Read more</button>
-                            </div>
+            <h2>Projects</h2>
+            <Slider {...settings} className="Slider">
+                {cardItems.map((d) => (
+                    <div className="Card">
+                        <div>
+                            <img src={SunLogo} alt="Placeholder image"></img>
                         </div>
-                    ))}
-                </Slider>
-            </div>
+                        <div className="CardInfo">
+                            <h3>{d.title}</h3>
+                            <p>{d.description}</p>
+                            <button>Read more</button>
+                        </div>
+                    </div>
+                ))}
+            </Slider>
         </div>
     );
 }
