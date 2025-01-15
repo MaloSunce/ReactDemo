@@ -1,13 +1,28 @@
 .Contact {
     display: grid;
     grid-template-areas:
-        "Title Title Title"
-        "Subtitles Subtitles Subtitles"
-        "SkillList SkillList SkillList";
+        "Title"
+        "ContactInfo";
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr 1fr;
     justify-content: center;
     text-align: center;
     height: 100vh;
     scroll-snap-align: start;
+}
+
+.Title {
+    grid-area: Title;
+}
+
+.ContactInfo {
+    grid-area: ContactInfo;
+    display: flex;
+    flex-direction: column;
+}
+
+.Contact h3, p, a {
+    gap: 0;
+    margin: 10px;
+    padding: 0;
 }
