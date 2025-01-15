@@ -1,68 +1,36 @@
 .Projects {
-    display: grid;
-    grid-template-areas:
-        "Title Title Title"
-        "CardCarousel CardCarousel CardCarousel";
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 4fr 1fr;
-    justify-content: center;
-    text-align: center;
     height: 100vh;
     scroll-snap-align: start;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    width: 75%;
 }
 
-.card {
-    background: var(--primary-container);
-    border-radius: 8px;
-    border: 1px solid #eeeeee;
-    padding: 30px;
-    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
-    width: 420px;
-    height: 400px;
-    transition: all 0.75s ease;
-    opacity: 0;
-    position: absolute;
-    transform: scale(0.85) translateY(50px);
+img {
+    height: 100px;
+    width: 100px;
+    justify-self: center;
 }
 
-.card h3, .card p {
-    line-height: 1.5;
-    margin: 0;
-}
-
-.CardCarousel {
-    list-style: none;
-    padding: 0;
+.Card {
+    background-color: var(--primary-container);
+    height: 500px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
-    height: 200px;
-    margin: 100px auto;
-    align-items: center;
-    position: relative;
+    justify-items: center;
 }
 
-.card.active {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-    box-shadow: 0 30px 20px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+.slick-slide > div {
+    margin: 0 10px;
 }
 
+.CardContent {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    gap: 4%;
+    padding: 4%;
 
-.card.next {
-    opacity: 1;
-    z-index: 0;
-}
-
-
-.card.prev {
-    transform: scale(1.1) translateY(-50px);
-    z-index: 2;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.Projects button {
-    width: 200px;
-    height: 50px;
 }
