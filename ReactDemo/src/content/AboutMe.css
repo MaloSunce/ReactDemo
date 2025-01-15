@@ -13,6 +13,13 @@
     margin: auto;
 }
 
+.AboutMe h2, h3, p {
+    gap: 0;
+    margin: 20px;
+    padding: 0;
+}
+
+
 .Disclaimer {
     margin: 0;
     grid-area: Disclaimer;
@@ -25,6 +32,7 @@
 
 .Image {
     grid-area: Image;
+    margin-bottom: 30px;
 }
 
 .AboutMe img {

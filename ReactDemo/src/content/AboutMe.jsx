@@ -13,7 +13,16 @@ function AboutMe() {
                 as visible light and infrared radiation with 10% at ultraviolet energies.
                 It is by far the most important source of energy for life on Earth. The Sun
                 has been an object of veneration in many cultures. It has been a central
-                subject for astronomical research since antiquity.</p>
+                subject for astronomical research since antiquity.
+
+                <br/><br/>
+
+                Information sourced from
+                <a href="https://en.wikipedia.org/wiki/Sun" target="_blank" rel="noopener noreferrer">
+                    Wikipedia: Sun
+                </a>
+                (accessed January 15, 2025).
+            </p>
         </div>
     );
 }
