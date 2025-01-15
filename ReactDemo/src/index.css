@@ -45,7 +45,7 @@ a {
 
 .SideMenu {
   position: fixed;
-  top: 25vh;
+  top: 20vh;
   right: 10px;
   margin: 0;
   opacity: 0;
@@ -58,11 +58,11 @@ a {
 
 .SideMenuBar {
   display: grid;
+  justify-items: center;
   padding-top: 170px;
   grid-template-rows: repeat(5, auto);
-  justify-items: center;
   background-color: #656565;
-  height: 20em;
+  height: 300px;
   width: 50px;
   margin-right: 20px;
   border-radius: 10px;
@@ -74,4 +74,5 @@ a {
   height: auto;
   left: 37%;
   transform: translateX(-50%);
+  margin-top: 15px;
 }

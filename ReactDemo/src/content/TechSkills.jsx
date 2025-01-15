@@ -1,13 +1,13 @@
-import './Skills.css'
+import './TechSkills.css'
 
-function Skills() {
+function TechSkills() {
     const backend = ["Kotlin", "C/C++", "Golang", "Python", "Dart", "SQL"]
     const frontend = ["React", "JavaScript", "HTML", "CSS", "Jetpack Compose", "Flutter"]
     const other = ["Git", "GCP", "MongoDB", "Linux", "Windows", "Android"]
 
     return (
-        <div className="Skills" id="Skills">
-            <h2 className="Title">Skills</h2>
+        <div className="TechSkills" id="TechSkills">
+            <h2 className="Title">Technical Skills</h2>
 
             <div className="Subtitles">
                 <h3>Back-end</h3>
@@ -30,4 +30,4 @@ function Skills() {
     );
 }
 
-export default Skills
+export default TechSkills

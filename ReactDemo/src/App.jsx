@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 
 import Header from './header-footer/Header.jsx'
 import Footer from './header-footer/Footer.jsx'
-import Skills from './content/Skills.jsx'
+import TechSkills from './content/TechSkills.jsx'
 import AboutMe from './content/AboutMe.jsx'
 import Projects from "./content/Projects.jsx";
 
@@ -49,7 +49,7 @@ function App() {
             <div className={`SideMenu ${isVisible ? 'visible' : ''}`}>
                 <a href="#"><img className="ToTopIcon" src={ToTopIcon} alt="Sun logo white"/> </a>
                 <div className="SideMenuBar">
-                    <a href="#Skills"><FontAwesomeIcon icon="tools" /></a>
+                    <a href="#TechSkills"><FontAwesomeIcon icon="tools" /></a>
                     <a href="#AboutMe"><FontAwesomeIcon icon="user" /></a>
                     <a href="#Projects"><FontAwesomeIcon icon="pencil" /></a>
                     <a href="#"><FontAwesomeIcon icon="graduation-cap" /></a>
@@ -58,8 +58,8 @@ function App() {
             </div>
 
             <Header/>
-            <Skills/>
             <AboutMe/>
+            <TechSkills/>
             <Projects/>
             <Footer/>
         </div>

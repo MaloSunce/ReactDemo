@@ -11,9 +11,9 @@ function Header() {
             <h1><a href="#">MaloSunce</a></h1>
             <nav className="Nav">
                 <a href="#">About me</a>
-                <a href="#Skills">Skills</a>
+                <a href="#Skills">Technical skills</a>
+                <a href="#">Software & Design Expertise</a>
                 <a href="#">Projects</a>
-                <a href="#">Classes</a>
                 <a href="#">Contact</a>
 
                 <div className="IconContainer">
