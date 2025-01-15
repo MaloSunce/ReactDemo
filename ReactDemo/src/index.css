@@ -50,17 +50,28 @@ a {
   margin: 0;
   opacity: 0;
   transition: opacity 0.3s;
-  display: grid;
-  grid-template-rows: repeat(6, auto);
-  justify-items: center;
-  gap: 1em;
 }
 
 .SideMenu.visible {
   opacity: 1;
 }
 
+.SideMenuBar {
+  display: grid;
+  padding-top: 170px;
+  grid-template-rows: repeat(5, auto);
+  justify-items: center;
+  background-color: #656565;
+  height: 20em;
+  width: 50px;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
 .ToTopIcon {
+  position: absolute;
   width: 7em;
   height: auto;
+  left: 37%;
+  transform: translateX(-50%);
 }

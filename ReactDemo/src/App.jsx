@@ -10,6 +10,14 @@ import ToTopIcon from "./assets/sun_white.png";
 
 import "./index.css"
 
+import ReactDOM from 'react-dom'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faUser, faTools, faPencil, faGraduationCap, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+library.add(fab, faUser, faTools, faPencil, faGraduationCap, faPhone)
+
 function App() {
 
     // Set visibility for back-to-top icon
@@ -38,14 +46,15 @@ function App() {
 
     return (
         <div className="App">
-
             <div className={`SideMenu ${isVisible ? 'visible' : ''}`}>
                 <a href="#"><img className="ToTopIcon" src={ToTopIcon} alt="Sun logo white"/> </a>
-                <a href="#">About me</a>
-                <a href="#Skills">Skills</a>
-                <a href="#">Projects</a>
-                <a href="#">Classes</a>
-                <a href="#">Contact</a>
+                <div className="SideMenuBar">
+                    <a href="#Skills"><FontAwesomeIcon icon="tools" /></a>
+                    <a href="#AboutMe"><FontAwesomeIcon icon="user" /></a>
+                    <a href="#Projects"><FontAwesomeIcon icon="pencil" /></a>
+                    <a href="#"><FontAwesomeIcon icon="graduation-cap" /></a>
+                    <a href="#"><FontAwesomeIcon icon="phone" /></a>
+                </div>
             </div>
 
             <Header/>
