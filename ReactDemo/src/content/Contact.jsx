@@ -12,7 +12,7 @@ function Contact() {
                 <h3>GitHub</h3>
                 <p><a href="https://github.com/MaloSunce?tab=repositories" target="_blank">/MaloSunce</a></p>
                 <h3>LinkedIn</h3>
-                <p><a href="https://www.linkedin.com/in/sara-djordjevic-2b0ab925b/" target="_blank">/in/sara-djordjevic-2b0ab925b/</a></p>
+                <p><a href="https://www.linkedin.com/in/sara-djordjevic-2b0ab925b/" target="_blank">/Sara-Djordjevic</a></p>
             </div>
         </div>
     );

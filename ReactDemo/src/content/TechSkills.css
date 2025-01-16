@@ -30,7 +30,6 @@
     grid-template-columns: repeat(3, 1fr);
     width: 66%;
     justify-self: center;
-    border-radius: 1em;
     box-shadow: 5px 5px 5px hsl(0, 0%, 0%, 10%);
     margin-bottom: 10px;
 }

@@ -10,6 +10,8 @@
 .Projects img {
     height: 100px;
     width: 100px;
+    margin: 0 auto;
+    display: block;
 }
 
 .Card {
@@ -17,14 +19,30 @@
     height: 500px;
     border-radius: 20px;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 30px;
 }
 
 .slick-slide > div {
     margin: 0 10px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .CardInfo {
     display: flex;
     flex-direction: column;
     padding: 4%;
+}
+
+.Projects button {
+    width: 100px;
+    justify-self: center;
+    margin: 0 auto;
+    display: block;
 }
