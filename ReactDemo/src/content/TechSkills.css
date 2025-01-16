@@ -2,10 +2,9 @@
     display: grid;
     grid-template-areas:
         "Title"
-        "Subtitles"
-        "SkillLists";
+        "Table";
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 0.3fr auto 1fr;
+    grid-template-rows: 1fr 0.3fr 2fr;
     justify-content: center;
     text-align: center;
     height: 100vh;
@@ -16,25 +15,25 @@
     grid-area: Title;
 }
 
-.Subtitles {
-    grid-area: Subtitles;
+.Table {
+    grid-area: Table;
 }
 
-.SkillLists {
-    grid-area: SkillLists;
-    padding-bottom: 20px;
-    padding-top: 20px;
+table, th, td {
+    border: 1px solid;
 }
 
-.Subtitles, .SkillLists {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+table {
     width: 75%;
     justify-self: center;
-    box-shadow: 5px 5px 5px hsl(0, 0%, 0%, 10%);
-    border: 1px solid var(--text-primary);
+    table-layout: fixed;
 }
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
 
 .SkillItem {
     display: grid;

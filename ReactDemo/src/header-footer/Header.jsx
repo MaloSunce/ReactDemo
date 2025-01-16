@@ -10,7 +10,7 @@ function Header() {
         <header className="Header">
             <div style={{display: 'flex'}}>
                 <h1><a href="#">MaloSunce</a></h1>
-                <img className="SunLogo" src={SunLogo} alt="Sun logo" style={{width: '2em', height: '2em', paddingTop: '30px'}}/>
+                <img className="SunLogo" src={SunLogo} alt="Sun logo" style={{width: '2em', height: '2em', paddingTop: '30px'}} title="Brightness icons created by Cap Cool - Flaticon"/>
             </div>
             <nav className="Nav">
                 <a href="#AboutMe">About me</a>
@@ -30,7 +30,7 @@ function Header() {
                     </a>
                 </div>
             </nav>
-            <img className="SunLogo" src={SunLogo} alt="Sun logo" style={{width: '22em', height: 'auto'}}/>
+            <img className="SunLogo" src={SunLogo} alt="Sun logo" style={{width: '22em', height: 'auto'}} title="Brightness icons created by Cap Cool - Flaticon"/>
             {/*<a href="https://www.flaticon.com/free-icons/brightness" title="brightness icons">Brightness icons created by Cap Cool - Flaticon</a>*/}
         </header>
     );
