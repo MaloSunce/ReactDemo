@@ -16,13 +16,13 @@ function TechSkills() {
             </div>
 
             <div className="SkillLists">
-                <ul className="SkillList">
+                <ul>
                     {backend.map(skill => <li key={skill}>{skill}</li>)}
                 </ul>
-                <ul className="SkillList">
+                <ul>
                     {frontend.map(skill => <li key={skill}>{skill}</li>)}
                 </ul>
-                <ul className="SkillList">
+                <ul>
                     {other.map(skill => <li key={skill}>{skill}</li>)}
                 </ul>
             </div>

@@ -7,10 +7,9 @@
     scroll-snap-align: start;
 }
 
-img {
+.Projects img {
     height: 100px;
     width: 100px;
-    justify-self: center;
 }
 
 .Card {
@@ -18,8 +17,6 @@ img {
     height: 500px;
     border-radius: 20px;
     display: flex;
-    flex-direction: column;
-    justify-items: center;
 }
 
 .slick-slide > div {
@@ -29,7 +26,5 @@ img {
 .CardInfo {
     display: flex;
     flex-direction: column;
-    justify-items: center;
-    gap: 4%;
     padding: 4%;
 }
