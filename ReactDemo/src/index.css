@@ -5,11 +5,6 @@
 
   scroll-snap-type: y mandatory;
 
-  /*
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;*/
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -20,15 +15,16 @@
   --text-primary: white;
   --text-secondary: #dedede;
   --primary-container: #6d6d6d;
-  --accent: #3b4d72;
+  --accent: #333333;
 }
 
 /* Alternative theme */
 [data-theme='dark'] {
-  --background: black;
+  --background: #242424;
   --text-primary: white;
-  --text-secondary: grey;
-  --accent: darkred;
+  --text-secondary: #dedede;
+  --primary-container: #6d6d6d;
+  --accent: #333333;
 }
 
 html { scroll-behavior: smooth;}

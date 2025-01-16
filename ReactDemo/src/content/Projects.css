@@ -50,9 +50,13 @@
     flex-direction: column;
 }
 
-.Projects button {
-    width: 100px;
+.ReadMoreBtn {
+    width: 150px;
     justify-self: center;
     margin: 0 auto;
     display: block;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: Transparent;
+    padding: 5px;
 }

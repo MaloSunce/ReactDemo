@@ -51,7 +51,7 @@ function Projects() {
                         <div className="CardInfo">
                             <h3>{d.title}</h3>
                             <p>{d.description}</p>
-                            <button>Read more</button>
+                            <button className="ReadMoreBtn">Read more</button>
                         </div>
                     </div>
                 ))}
