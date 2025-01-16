@@ -24,7 +24,7 @@ h1 {
     grid-area: nav;
     display: grid;
     grid-template-columns: repeat(7, auto);
-    padding-top: 2em;
+    padding-top: 1.2em;
     align-items: center;
     justify-items: right;
     float: right;
@@ -33,6 +33,7 @@ h1 {
 
 .Nav a {
     transition: transform 0.2s;
+    text-align: center;
 }
 
 .Nav a:hover {

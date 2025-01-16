@@ -49,13 +49,6 @@ function App() {
         <div className="App">
             <div className={`SideMenu ${isVisible ? 'visible' : ''}`}>
                 <a href="#"><img className="ToTopIcon" src={ToTopIcon} alt="Sun logo white"/> </a>
-                <div className="SideMenuBar">
-                    <a href="#AboutMe"><FontAwesomeIcon icon="user" /></a>
-                    <a href="#TechSkills"><FontAwesomeIcon icon="tools" /></a>
-                    <a href="#DevelSkills"><FontAwesomeIcon icon="computer" /></a>
-                    <a href="#Projects"><FontAwesomeIcon icon="pencil" /></a>
-                    <a href="#Contact"><FontAwesomeIcon icon="phone" /></a>
-                </div>
             </div>
 
             <Header/>
