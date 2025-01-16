@@ -18,14 +18,13 @@ function Projects() {
             id: 2,
             title: 'IceMap',
             description: 'A system to determine the thickness of the ice on lakes with a ' +
-                'Python server and mobile application developed with Dart and Flutter. ' +
-                'The map shows ice thickness in different areas on a lake. ' +
-                'Data is archived in a SQLite database that was designed and implemented from scratch.',
+                'Python server, mobile application developed with Dart and Flutter, and a custom color coded map. ',
         },
         {
             id: 3,
             title: 'MyGamingList',
-            description: 'A website developed with HTML, CSS and JavaScript, with a Go server. The website retrieves data from the IGDB API and allows users to rate and bookmark various games. The website is deployed on a Linux server with a simple Docker setup, and uses Firebase for storing user data, among other things.',
+            description: 'A website developed with HTML, CSS and JavaScript, with a Go server. ' +
+                'The website retrieves data from the IGDB API and allows users to rate and bookmark various games. ',
         },
         {
             id: 4,
@@ -48,9 +47,7 @@ function Projects() {
             <Slider {...settings} className="Slider">
                 {cardItems.map((d) => (
                     <div className="Card">
-                        <div>
-                            <img src={SunLogo} alt="Placeholder image"></img>
-                        </div>
+                        <img src={SunLogo} alt="Placeholder image"></img>
                         <div className="CardInfo">
                             <h3>{d.title}</h3>
                             <p>{d.description}</p>
