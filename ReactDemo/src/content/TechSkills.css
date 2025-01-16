@@ -22,14 +22,16 @@
 
 .SkillLists {
     grid-area: SkillLists;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .Subtitles, .SkillLists {
-    background-color: var(--primary-container);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 66%;
     justify-self: center;
     box-shadow: 5px 5px 5px hsl(0, 0%, 0%, 10%);
     margin-bottom: 10px;
+    border: 1px solid var(--text-primary);
 }
