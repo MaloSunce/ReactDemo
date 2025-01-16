@@ -3,9 +3,8 @@ import Me from '../assets/me.jpg'
 function AboutMe() {
     return(
         <div className="AboutMe" id="AboutMe">
-            <h2 className="Title">AboutMe</h2>
-            <p className="Disclaimer">This web site is a work in progress!!</p>
-            <img className="Image" src={Me} alt="Photo of me"></img>
+            <h2 className="Title">About Me</h2>
+            <img src={Me} alt="Photo of me"></img>
             <p className="Description">
                 The Sun is the star at the center of the Solar System. It is a massive,
                 nearly perfect sphere of hot plasma, heated to incandescence by nuclear
@@ -19,10 +18,9 @@ function AboutMe() {
 
                 Information sourced from
                 <a href="https://en.wikipedia.org/wiki/Sun" target="_blank" rel="noopener noreferrer">
-                    Wikipedia: Sun
-                </a>
-                (accessed January 15, 2025).
+                    Wikipedia: Sun </a> (accessed January 15, 2025).
             </p>
+            <p className="Box1">This website is a work in progress!!</p>
         </div>
     );
 }

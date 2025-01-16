@@ -1,15 +1,16 @@
 .AboutMe {
+    height: 100vh;
     display: grid;
     grid-template-areas:
-        "Title"
-        "Disclaimer"
-        "Image"
-        "Descripition";
-    grid-template-rows: 0.2fr 0.3fr 1fr 1fr;
-    justify-items: center;
-    text-align: center;
-    height: 100vh;
+        "Title Title Image ."
+        "Description Description Image ."
+        "Box1 Box1 Image .";
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 0.3fr;
     scroll-snap-align: start;
+    padding: 40px;
+    width: 75%;
+
     margin: auto;
 }
 
@@ -19,30 +20,24 @@
     padding: 0;
 }
 
-
-.Disclaimer {
-    margin: 0;
-    grid-area: Disclaimer;
-    font-size: 1.5em;
-}
-
 .AboutMe .Title {
     grid-area: Title;
-}
-
-.Image {
-    grid-area: Image;
-    margin-bottom: 30px;
+    align-self: end;
 }
 
 .AboutMe img {
-    max-width: 100%;
-    height: 350px;
-    width: auto;
-    justify-content: start;
+    grid-area: Image;
+    width: 100%;
+    height: auto;
+    align-self: center;
 }
 
 .AboutMe .Description {
-    grid-area: Descripition;
-    width: 70%;
+    grid-area: Description;
+    width: 80%;
+}
+
+.Box1 {
+    grid-area: Box1;
+    font-size: 1.5em;
 }

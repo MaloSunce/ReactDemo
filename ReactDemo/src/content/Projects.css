@@ -38,11 +38,11 @@
 }
 
 .slick-prev {
-    left: -60px !important;
+    left: -20px !important;
 }
 
 .slick-next {
-    right: -60px !important;
+    right: -20px !important;
 }
 
 .CardInfo {
