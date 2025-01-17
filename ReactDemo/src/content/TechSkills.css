@@ -19,24 +19,25 @@
     grid-area: Table;
 }
 
-table, th, td {
-    border: 1px solid;
-}
-
 table {
     width: 75%;
     justify-self: center;
     table-layout: fixed;
 }
 
+table, td {
+    border: 1px solid;
+}
+
 th, td {
     padding: 10px;
     text-align: center;
+    height: 40px;
 }
 
 
 .SkillItem {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
-    height: 40px;
+    height: 60%;
 }
