@@ -7,3 +7,11 @@
     scroll-snap-align: start;
     margin: auto;
 }
+
+.DevelSkills li {
+    transition: transform 0.2s;
+}
+
+.DevelSkills li:hover{
+    transform: scale(1.25);
+}

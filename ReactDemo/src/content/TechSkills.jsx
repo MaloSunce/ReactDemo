@@ -100,6 +100,14 @@ function TechSkills() {
                 </tbody>
 
             </table>
+            <p style={
+                {
+                    fontSize: '0.8em',
+                    color: 'var(--accent-secondary)',
+                    width: '100vw',
+                    marginLeft: '67vw',
+                    marginTop: '6vw'
+                }}>*Ranking of proficiency on a scale from 1 to 5.</p>
         </div>
     );
 }
