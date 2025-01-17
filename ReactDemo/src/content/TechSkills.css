@@ -32,13 +32,16 @@ th, td {
     height: 40px;
 }
 
+th {
+    text-align: left;
+}
+
 th.WideCol {
     width: 42%
 }
 
 .LeftAlign {
     padding: 0;
-    text-align: left !important;
 }
 
 .LeftAlign h3 {
