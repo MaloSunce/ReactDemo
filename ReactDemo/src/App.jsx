@@ -6,7 +6,6 @@ import TechSkills from './content/TechSkills.jsx'
 import DevelSkills from './content/DevelSkills.jsx'
 import AboutMe from './content/AboutMe.jsx'
 import Projects from "./content/Projects.jsx";
-import Contact from "./content/Contact.jsx";
 
 import "./index.css"
 
@@ -56,7 +55,6 @@ function App() {
             <TechSkills/>
             <DevelSkills/>
             <Projects/>
-            <Contact/>
             <Footer/>
         </div>
     );

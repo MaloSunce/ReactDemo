@@ -17,7 +17,7 @@ function Header() {
                 <a href="#TechSkills">Technical skills</a>
                 <a href="#DevelSkills">Software & Design Expertise</a>
                 <a href="#Projects">Projects</a>
-                <a href="#Contact">Contact</a>
+                <a href="#Footer">Contact</a>
 
                 <div className="IconContainer">
                     <a href="https://github.com/MaloSunce?tab=repositories" target="_blank">
