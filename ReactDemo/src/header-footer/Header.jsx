@@ -24,7 +24,7 @@ function Header() {
                 <a href="#Projects">Projects</a>
                 <a href="#Footer">Contact</a>
 
-                <div className="IconContainer">
+                <div style={{display: 'flex', gap: '1.7em', paddingRight: '2%'}}>
                     <a href="https://github.com/MaloSunce?tab=repositories" target="_blank">
                         <img className="Icons" src={GitHubLogo} alt="GitHub logo"></img>
                         {/*<dir className="Logo"><img src="../assets/sun.png" alt="Sun Icon"> </img></dir>*/}

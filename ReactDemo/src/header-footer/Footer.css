@@ -1,15 +1,15 @@
 .Footer {
     scroll-snap-align: end;
-    margin-left: 60px;
-    margin-right: 60px;
+    margin: 10% 3% auto 3%;
 }
 
-.ContactInfo h2, .ContactInfo h3, .ContactInfo p {
+.ContactInfo h3, .ContactInfo p {
     margin-top: 0;
 }
 
 .ContactInfo h3 {
     font-size: 1.5em;
+    margin-bottom: 5px;
     color: var(--text-secondary);
 }
 
@@ -19,6 +19,5 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     width: 50%;
-    justify-self: start;
     padding-bottom: 10px;
 }
