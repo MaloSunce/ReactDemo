@@ -7,13 +7,9 @@
     margin: auto;
 }
 
-.Table {
-    grid-area: Table;
-}
-
 table {
-    width: 75%;
-    justify-self: center;
+    width: 80%;
+    margin: 0 10% 0 auto;
     table-layout: fixed;
 }
 
@@ -27,7 +23,7 @@ th {
 }
 
 th.WideCol {
-    width: 42%
+    width: 35%
 }
 
 .LeftAlign {

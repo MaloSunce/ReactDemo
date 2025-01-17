@@ -23,13 +23,13 @@ function TechSkills() {
         ["JavaScript", 3],
     ];
 
-    const other = ["Git", "GCP", "MongoDB", "Linux", "Windows", "Android"];
+    const other = ["Git", "Google Cloud Platform", "MongoDB", "Linux", "Windows", "Android"];
 
     return (
         <div className="TechSkills" id="TechSkills">
-            <h2 className="Title">Technical Skills</h2>
+            <h2 style={{margin: '5% auto 2% auto', paddingRight: '2%'}}>Technical Skills</h2>
 
-            <table className="Table">
+            <table>
                 <thead>
                 <tr>
                     <th className="WideCol"><h3>Back-end</h3></th>
