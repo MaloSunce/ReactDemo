@@ -60,6 +60,18 @@ function TechSkills() {
                                                         }}
                                                     ></div>
                                                 ))}
+                                                {Array(5-backend[index][1]).fill(null).map((_, barIndex) => (
+                                                    <div
+                                                        key={barIndex}
+                                                        style={{
+                                                            backgroundColor: 'Transparent',
+                                                            border: '2px solid var(--accent)',
+                                                            width: `30px`,
+                                                            height: '15px',
+                                                            borderRadius: '5px'
+                                                        }}
+                                                    ></div>
+                                                ))}
                                             </div>
                                         ) : <div></div>}
                                         {/* <div style={{backgroundColor: 'var(--accent)', width: `${backend[index][1] * 18}%`, borderRadius: '10px'}}></div>*/}
@@ -80,6 +92,18 @@ function TechSkills() {
                                                         key={barIndex}
                                                         style={{
                                                             backgroundColor: 'var(--accent)',
+                                                            width: `30px`,
+                                                            height: '15px',
+                                                            borderRadius: '5px'
+                                                        }}
+                                                    ></div>
+                                                ))}
+                                                {Array(5-frontend[index][1]).fill(null).map((_, barIndex) => (
+                                                    <div
+                                                        key={barIndex}
+                                                        style={{
+                                                            backgroundColor: 'Transparent',
+                                                            border: '2px solid var(--accent)',
                                                             width: `30px`,
                                                             height: '15px',
                                                             borderRadius: '5px'
