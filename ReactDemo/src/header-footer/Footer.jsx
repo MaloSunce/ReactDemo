@@ -27,7 +27,7 @@ function Footer() {
 
             <hr className="solid"/>
 
-            <p style={{paddingBottom: '40px'}}> &copy; {new Date().getFullYear()} MaloSunce </p>
+            <p style={{paddingBottom: '40px', color: 'var(--text-secondary)'}}> &copy; {new Date().getFullYear()} MaloSunce </p>
         </footer>
     );
 }

@@ -1,5 +1,5 @@
 .Footer {
-    scroll-snap-align: start;
+    scroll-snap-align: end;
     margin-left: 60px;
     margin-right: 60px;
 }
@@ -10,6 +10,7 @@
 
 .ContactInfo h3 {
     font-size: 1.5em;
+    color: var(--text-secondary);
 }
 
 .ContactInfo {
