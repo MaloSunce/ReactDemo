@@ -16,11 +16,11 @@ function AboutMe() {
 
                 <br/><br/>
 
-                Information sourced from
-                <a href="https://en.wikipedia.org/wiki/Sun" target="_blank" rel="noopener noreferrer">
-                    Wikipedia: Sun </a> (accessed January 15, 2025).
+                <i>Information sourced from  <br/>
+                <a href="https://en.wikipedia.org/wiki/Sun" target="_blank" rel="noopener noreferrer" style={{color: '#b3b3ff'}}>
+                    Wikipedia: Sun </a> (accessed January 15, 2025).</i>
             </p>
-            <p className="Box1">This website is a work in progress!!</p>
+            <b className="Box1">This website is a work in progress!!</b>
         </div>
     );
 }

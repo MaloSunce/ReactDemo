@@ -1,11 +1,7 @@
 .DevelSkills {
-    display: grid;
-    grid-template-areas:
-        "Title Title Title"
-        "Subtitles Subtitles Subtitles"
-        "SkillList SkillList SkillList";
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
     justify-content: center;
     text-align: center;
     height: 100vh;

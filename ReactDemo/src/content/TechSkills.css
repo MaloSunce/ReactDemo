@@ -1,20 +1,10 @@
 .TechSkills {
-    display: grid;
-    grid-template-areas:
-        "Title"
-        "Table";
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 0.3fr 2fr;
-    justify-content: center;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
     width: 75%;
     scroll-snap-align: start;
     margin: auto;
-}
-
-.Title {
-    grid-area: Title;
 }
 
 .Table {
