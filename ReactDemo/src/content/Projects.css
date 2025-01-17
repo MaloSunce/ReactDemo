@@ -9,19 +9,19 @@
 }
 
 .Projects img {
-    height: 100px;
-    width: 100px;
+    height: 120px;
+    width: 120px;
     margin: 0 auto;
     display: block;
+   padding-top: 10%;
 }
-
 .Card {
+    display: flex !important;
+    flex-direction: column;
     background-color: Transparent;
     height: 500px;
     border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     border: 2px solid;
@@ -54,9 +54,7 @@
 
 .ReadMoreBtn {
     width: 150px;
-    justify-self: center;
     margin: 20px auto;
-    display: block;
     color: var(--text-secondary);
     border: 2px solid var(--text-secondary);
     border-radius: 20px;

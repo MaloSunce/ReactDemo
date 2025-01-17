@@ -45,14 +45,14 @@ function Projects() {
         <div className="Projects" id="Projects">
             <h2>Projects</h2>
             <Slider {...settings} className="Slider">
-                {cardItems.map((d) => (
+                {cardItems.map((cardItem) => (
                     <div className="Card">
                         <img src={SunLogo} alt="Placeholder image"></img>
                         <div className="CardInfo">
-                            <h3>{d.title}</h3>
-                            <p>{d.description}</p>
-                            <button className="ReadMoreBtn">Read more</button>
+                            <h3>{cardItem.title}</h3>
+                            <p>{cardItem.description}</p>
                         </div>
+                        <button className="ReadMoreBtn">Read more</button>
                     </div>
                 ))}
             </Slider>
