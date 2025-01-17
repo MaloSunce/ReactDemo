@@ -2,6 +2,7 @@
     display: grid;
     grid-template-areas: "title nav"
                           "logo logo";
+    grid-template-columns: 1fr 2fr;
     align-items: start;
     background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../assets/clouds.jpg');
     height: 100vh;
@@ -14,21 +15,27 @@
 }
 
 h1 {
-    grid-area: title;
     font-size: 3em;
-    margin-top: 0.4em;
     padding-left: 40px;
+}
+
+.LogoContainer {
+    grid-area: title;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 35%;
 }
 
 .Nav {
     grid-area: nav;
     display: grid;
     grid-template-columns: repeat(7, auto);
-    padding-top: 1.2em;
+    margin-top: 3%;
     align-items: center;
     justify-items: right;
     float: right;
-    font-size: 1.2em;
+    font-size: 1.15em;
 }
 
 .Nav a {
@@ -37,7 +44,7 @@ h1 {
 }
 
 .Nav a:hover {
-    transform: scale(1.25);
+    transform: scale(1.2);
 }
 
 .IconContainer {
@@ -53,6 +60,6 @@ h1 {
 .SunLogo {
     grid-area: logo;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-self: center;
 }

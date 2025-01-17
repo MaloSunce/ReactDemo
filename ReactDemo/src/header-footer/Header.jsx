@@ -8,9 +8,14 @@ function Header() {
 
     return (
         <header className="Header">
-            <div style={{display: 'flex'}}>
+            <div className="LogoContainer">
                 <h1><a href="#">MaloSunce</a></h1>
-                <img className="SunLogo" src={SunLogo} alt="Sun logo" style={{width: '2em', height: '2em', paddingTop: '30px'}} title="Brightness icons created by Cap Cool - Flaticon"/>
+                <img
+                    src={SunLogo}
+                    alt="Sun logo"
+                    style={{width: '2em', height: '2em', marginBottom: '3%'}}
+                    title="Brightness icons created by Cap Cool - Flaticon"
+                />
             </div>
             <nav className="Nav">
                 <a href="#AboutMe">About me</a>
