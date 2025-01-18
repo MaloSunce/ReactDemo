@@ -47,6 +47,10 @@
     right: -20px !important;
 }
 
+.slick-dots li.slick-active button:before {
+    color: var(--text-primary) !important;
+}
+
 .CardInfo {
     display: flex;
     flex-direction: column;

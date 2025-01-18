@@ -9,7 +9,7 @@ function TechSkills() {
         ["Kotlin", 5],
         ["C/C++", 4],
         ["Golang", 5],
-        ["Python", 5],
+        ["Python", 4],
         ["Dart", 4],
         ["SQL", 3]
     ];

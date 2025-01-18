@@ -20,7 +20,7 @@ library.add(fab, faUser, faTools, faPencil, faPhone, faComputer)
 
 function App() {
 
-    // Set visibility for back-to-top icon
+    // Set visibility for back-to-top icon based on scroll
     const [isVisible, setIsVisible] = useState(false);
     useEffect(() => {
         const handleScroll = () => {
@@ -37,12 +37,6 @@ function App() {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-
-    // Event listener on 'hide-menu' click
-    useEffect(() =>  {
-
-        }
-    )
 
     return (
         <div className="App">
