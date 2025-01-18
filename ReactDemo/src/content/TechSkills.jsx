@@ -1,6 +1,7 @@
 import './TechSkills.css'
 
-import * as React from 'react';
+import React from 'react';
+import {useTable} from 'react-table';
 
 function TechSkills() {
 
@@ -25,114 +26,101 @@ function TechSkills() {
 
     const other = ["Git", "Google Cloud Platform", "MongoDB", "Linux", "Windows", "Android"];
 
+    const maxLength = Math.max(backend.length, frontend.length, other.length);
+
+    // Generate set of 5 dots representing the proficiency of each skill
+    const proficiency = (prof) => {
+        const maxLevel = 5;
+        const filled = '● '.repeat(prof);
+        const empty = '● '.repeat(maxLevel - prof);
+
+        return (
+            <>
+                {filled.split(' ').map((dot, index) => (
+                    <span key={`filled-${index}`} style={{color: 'var(--text-primary)'}}> {dot} </span>
+                ))}
+                {empty.split(' ').map((dot, index) => (
+                    <span key={`empty-${index}`} style={{color: 'var(--accent-secondary)'}}> {dot} </span>
+                ))}
+            </>
+        );
+    };
+
+    const data = Array.from({length: maxLength}).map((_, index) => ({
+        skillBackend: backend[index]?.[0] || "",
+        profBack: proficiency(backend[index]?.[1] || 0),  // Convert proficiency to dots
+        skillFrontend: frontend[index]?.[0] || "",
+        profFront: proficiency(frontend[index]?.[1] || 0), // Convert proficiency to dots
+        skillOther: other[index] || "",
+    }));
+
+    // Map each column header title to the corresponding key
+    const columns = React.useMemo(() => [
+        {
+            Header: "Back-end",
+            accessor: "skillBackend",
+        },
+        {
+            Header: "",
+            accessor: "profBack"
+        },
+        {
+            Header: "",
+            accessor: "blank1"
+        },
+        {
+            Header: "Front-end",
+            accessor: "skillFrontend",
+        },
+        {
+            Header: "",
+            accessor: "profFront"
+        },
+        {
+            Header: "",
+            accessor: "blank2"
+        },
+        {
+            Header: "Other",
+            accessor: "skillOther"
+        },
+    ], []);
+
+    const {getTableProps, getTableBodyProps, headerGroups, rows, prepareRow} =
+        useTable({columns, data});
+
     return (
         <div className="TechSkills" id="TechSkills">
-            <h2 style={{margin: '5% auto 2% auto', paddingRight: '2%'}}>Technical Skills</h2>
-
-            <table>
-                <thead>
-                <tr>
-                    <th className="WideCol"><h3>Back-end</h3></th>
-                    <th className="WideCol"><h3>Front-end</h3></th>
-                    <th className="LeftAlign"><h3>Other</h3></th>
-                </tr>
-                </thead>
-                <tbody>
-                {/* Map each (skill, proficiency) pair to a row in each their own column */}
-                {Array(Math.max(backend.length, frontend.length, other.length))
-                    .fill(null)
-                    .map((_, index) => (
-                        <tr key={index}>
-                            <td>
-                                {backend[index] ? (
-                                    <div className="SkillItem">
-                                        <div>{backend[index][0]}</div>
-                                        {backend[index][1] ? (
-                                            <div style={{display: 'flex', gap: '5px', marginTop: '3px'}}>
-                                                {Array(backend[index][1]).fill(null).map((_, barIndex) => (
-                                                    <div
-                                                        key={barIndex}
-                                                        style={{
-                                                            backgroundColor: 'var(--accent)',
-                                                            width: `30px`,
-                                                            height: '15px',
-                                                            borderRadius: '5px'
-                                                        }}
-                                                    ></div>
-                                                ))}
-                                                {Array(5-backend[index][1]).fill(null).map((_, barIndex) => (
-                                                    <div
-                                                        key={barIndex}
-                                                        style={{
-                                                            backgroundColor: 'Transparent',
-                                                            border: '2px solid var(--accent)',
-                                                            width: `30px`,
-                                                            height: '15px',
-                                                            borderRadius: '5px'
-                                                        }}
-                                                    ></div>
-                                                ))}
-                                            </div>
-                                        ) : <div></div>}
-                                        {/* <div style={{backgroundColor: 'var(--accent)', width: `${backend[index][1] * 18}%`, borderRadius: '10px'}}></div>*/}
-                                    </div>
-                                ) :
-                                    <div></div> // Empty div as default for missing data
-                                }
-                            </td>
-
-                            <td>
-                                {frontend[index] ? (
-                                    <div className="SkillItem">
-                                        <div>{frontend[index][0]}</div>
-                                        {frontend[index][1] ? (
-                                            <div style={{display: 'flex', gap: '5px', marginTop: '3px'}}>
-                                                {Array(frontend[index][1]).fill(null).map((_, barIndex) => (
-                                                    <div
-                                                        key={barIndex}
-                                                        style={{
-                                                            backgroundColor: 'var(--accent)',
-                                                            width: `30px`,
-                                                            height: '15px',
-                                                            borderRadius: '5px'
-                                                        }}
-                                                    ></div>
-                                                ))}
-                                                {Array(5-frontend[index][1]).fill(null).map((_, barIndex) => (
-                                                    <div
-                                                        key={barIndex}
-                                                        style={{
-                                                            backgroundColor: 'Transparent',
-                                                            border: '2px solid var(--accent)',
-                                                            width: `30px`,
-                                                            height: '15px',
-                                                            borderRadius: '5px'
-                                                        }}
-                                                    ></div>
-                                                ))}
-                                            </div>
-                                        ) : <div></div>}
-                                    </div>
-                                ) :
-                                    <div></div> // Empty div as default for missing data
-                                }
-                            </td>
-
-                            <td style={{textAlign: 'left'}}> {other[index] ? other[index] : ""} </td>
-                        </tr>
-                    ))}
-                </tbody>
-
-            </table>
-            <p style={
-                {
-                    fontSize: '0.8em',
-                    color: 'var(--accent-secondary)',
-                    width: '100vw',
-                    marginLeft: '67vw',
-                    marginTop: '6vw'
-                }}>*Ranking of proficiency on a scale from 1 to 5.</p>
+            <h2>Technical Skills</h2>
+            <div className="TableContainer">
+                <table {...getTableProps()}>
+                    <thead>
+                    {headerGroups.map((headerGroup) => (
+                        <tr {...headerGroup.getHeaderGroupProps()}>
+                            {headerGroup.headers.map((columns) => (
+                                <th {...columns.getHeaderProps()}>
+                                    <h3>
+                                        {columns.render("Header")}
+                                    </h3>
+                                </th>
+                            ))}
+                        </tr>))}
+                    </thead>
+                    <tbody {...getTableBodyProps()}>
+                    {rows.map((row) => {
+                        prepareRow(row)
+                        return (
+                            <tr {...row.getRowProps()}>
+                                {row.cells.map((cell) => (
+                                    <td {...cell.getCellProps()}> {cell.render("Cell")} </td>
+                                ))}
+                            </tr>)
+                    })}
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 }
+
 export default TechSkills
