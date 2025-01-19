@@ -55,70 +55,72 @@ function TechSkills() {
 
     return (
         <div className="TechSkills" id="TechSkills">
-            <h2>Technical Skills</h2>
-            <div className="TableContainer">
-                <table {...getTableProps()}>
-                    <thead>
-                    {headerGroups.map((headerGroup) => (
-                        <tr {...headerGroup.getHeaderGroupProps()}>
-                            {headerGroup.headers.map((columns) => (
-                                <th {...columns.getHeaderProps()}>
-                                    <h3>
-                                        {columns.render("Header")}
-                                    </h3>
-                                </th>
-                            ))}
-                        </tr>))}
-                    </thead>
-                    <tbody {...getTableBodyProps()}>
-                    {rows.map((row, rowIndex) => {
-                        prepareRow(row)
-                        return (
-                            <tr {...row.getRowProps()}>
-                                {row.cells.map((cell) => {
-                                    const accessor = cell.column.id; // Get the column's accessor (e.g., skillBackend, skillFrontend)
-                                    const isBackend = accessor === "skillBackend";
-                                    const isFrontend = accessor === "skillFrontend";
+            <h2 style={{marginBottom: '1%'}}>Technical Skills</h2>
+            <table {...getTableProps()} style={{width: '100%'}}>
+                <thead>
+                {headerGroups.map((headerGroup) => (
+                    <tr {...headerGroup.getHeaderGroupProps()}>
+                        {headerGroup.headers.map((columns) => (
+                            <th {...columns.getHeaderProps()}>
+                                <h3>
+                                    {columns.render("Header")}
+                                </h3>
+                            </th>
+                        ))}
+                    </tr>))}
+                </thead>
+                <tbody {...getTableBodyProps()}>
+                {rows.map((row, rowIndex) => {
+                    prepareRow(row)
+                    return (
+                        <tr {...row.getRowProps()}>
+                            {row.cells.map((cell) => {
+                                const accessor = cell.column.id; // Get the column's accessor (e.g., skillBackend, skillFrontend)
+                                const isBackend = accessor === "skillBackend";
+                                const isFrontend = accessor === "skillFrontend";
 
-                                    return (
-                                        <td {...cell.getCellProps()}>
-                                            {cell.render("Cell")}
+                                return (
+                                    <td {...cell.getCellProps()}>
+                                        {cell.render("Cell")}
 
-                                            {/* Render proficiency bars for backend and frontend */}
-                                            {(isBackend || isFrontend) && (
-                                                <div style={{ display: 'flex', gap: '5px', marginTop: '3px' }}>
-                                                    {/* Determine which column is currently being rendered */}
-                                                    {Array((isBackend ? backend[rowIndex]?.[1] : frontend[rowIndex]?.[1]) || 0)
-                                                        .fill(null)
-                                                        .map((_, barIndex) => (
-                                                            <div
-                                                                key={`filled-${barIndex}`}
-                                                                style={{
-                                                                    backgroundColor: 'var(--accent)',
-                                                                    width: '30px',
-                                                                    height: '15px',
-                                                                    borderRadius: '5px',
-                                                                }}
-                                                            ></div>
-                                                        ))}
-                                                    {Array(5 - ((isBackend ? backend[rowIndex]?.[1] : frontend[rowIndex]?.[1]) || 5))
-                                                        .fill(null)
-                                                        .map((_, barIndex) => (
-                                                            <div
-                                                                key={`empty-${barIndex}`}
-                                                                style={{
-                                                                    backgroundColor: 'transparent',
-                                                                    border: '2px solid var(--accent)',
-                                                                    width: '30px',
-                                                                    height: '15px',
-                                                                    borderRadius: '5px',}}
-                                                            ></div>))}
-                                                </div>)}
-                                        </td>);})}
-                            </tr>)})}
-                    </tbody>
-                </table>
-            </div>
+                                        {/* Render proficiency bars for backend and frontend */}
+                                        {(isBackend || isFrontend) && (
+                                            <div
+                                                style={{display: 'flex', gap: '5px', marginTop: '3px', width: '220px'}}>
+                                                {/* Determine which column is currently being rendered */}
+                                                {Array((isBackend ? backend[rowIndex]?.[1] : frontend[rowIndex]?.[1]) || 0)
+                                                    .fill(null)
+                                                    .map((_, barIndex) => (
+                                                        <div
+                                                            key={`filled-${barIndex}`}
+                                                            style={{
+                                                                backgroundColor: 'var(--accent)',
+                                                                width: '15%',
+                                                                height: '15px',
+                                                                borderRadius: '5px',
+                                                            }}
+                                                        ></div>
+                                                    ))}
+                                                {Array(5 - ((isBackend ? backend[rowIndex]?.[1] : frontend[rowIndex]?.[1]) || 5))
+                                                    .fill(null)
+                                                    .map((_, barIndex) => (
+                                                        <div
+                                                            key={`empty-${barIndex}`}
+                                                            style={{
+                                                                backgroundColor: 'transparent',
+                                                                border: '2px solid var(--accent)',
+                                                                width: '15%',
+                                                                height: '15px',
+                                                                borderRadius: '5px',
+                                                            }}
+                                                        ></div>))}
+                                            </div>)}
+                                    </td>);
+                            })}
+                        </tr>)
+                })}
+                </tbody>
+            </table>
         </div>
     );
 }
