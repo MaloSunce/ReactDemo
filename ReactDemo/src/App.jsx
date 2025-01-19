@@ -26,20 +26,22 @@ function App() {
     // Set visibility for back-to-top icon based on scroll
     const [isVisible, setIsVisible] = useState(false);
     useEffect(() => {
-        const handleScroll = () => {
-            // Check scroll position
-            if (window.scrollY > window.innerHeight * 4.6) {
-                setIsVisible(false);
-            } else if (window.scrollY > window.innerHeight - 100) {
+        const handleMouseMove = (event) => {
+            // Check if the mouse is within the top 50 pixels of the page
+            if (event.clientY <= 50 &&
+                (window.scrollY < window.innerHeight * 4.6) &&
+                (window.scrollY > window.innerHeight - 100)
+            ) {
                 setIsVisible(true);
             } else {
                 setIsVisible(false);
             }
         };
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('mousemove', handleMouseMove);
+
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('mousemove', handleMouseMove);
         };
     }, []);
 
