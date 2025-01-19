@@ -9,11 +9,11 @@ function FloatingHeader() {
     return (
         <header className="FloatingHeader">
             <div className="LogoContainer">
-                <h1><a href="#">MaloSunce</a></h1>
+                <h1 style={{fontSize: '2em'}}><a href="#">MaloSunce</a></h1>
                 <img
                     src={SunLogo}
                     alt="Sun logo"
-                    style={{width: '2em', height: '2em', marginBottom: '3%'}}
+                    style={{width: '1.7em', height: '1.7em', marginBottom: '3%'}}
                     title="Brightness icons created by Cap Cool - Flaticon"
                 />
             </div>

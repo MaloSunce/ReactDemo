@@ -13,6 +13,7 @@
   --text-primary: white;
   --text-secondary: #a8a8a8;
   --primary-container: #6d6d6d;
+  --secondary-container: #1e1e1e;
   --accent: #333333;
   --accent-secondary: #484848;
   --darkest: #000000;
@@ -72,7 +73,7 @@ a {
 .HeaderVisibility {
   position: fixed;
   width: 100%;
-  margin: 10px 0;
+  margin: 0;
   opacity: 0;
   transition: opacity 0.3s;
 }
