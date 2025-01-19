@@ -72,7 +72,7 @@ function FloatingHeader() {
                         <img className="Icons" src={LinkedInLogo} alt="LinkedIn logo"></img>
                         {/*<a href="https://www.flaticon.com/free-icons/brightness" title="brightness icons">Brightness icons created by Cap Cool - Flaticon</a>*/}
                     </a>
-                    <a id="color-switch"><FontAwesomeIcon icon="palette"/></a>
+                    {/*<a id="color-switch"><FontAwesomeIcon icon="palette"/></a>*/}
                 </div>
             </nav>
         </header>
