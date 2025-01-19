@@ -12,8 +12,6 @@ import FloatingHeader from "./header-footer/FloatingHeader.jsx";
 import "./index.css"
 import "./header-footer/FloatingHeader.css"
 
-import ToTopIcon from "./assets/sun_white.png";
-
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faUser, faTools, faPencil, faPhone, faComputer } from '@fortawesome/free-solid-svg-icons'

@@ -20,13 +20,15 @@
 }
 
 /* Light theme */
-[data-theme='light'] {
-  --background: #ffffff;
-  --text-primary: #252525;
-  --text-secondary: #444444;
-  --primary-container: #b7b7b7;
-  --accent: #c9c9c9;
-  --accent-secondary: #d7d7d7;
+[data-theme='sunrise'] {
+  --background: #FF7B00;
+  --text-primary: #FFEA00;
+  --text-secondary: #FFDD00;
+  --primary-container: #FFAA00;
+  --secondary-container: #FFB700;
+  --accent: #FFC300;
+  --accent-secondary: #FFD000;
+  --darkest: #FFDD00;
 }
 
 html {

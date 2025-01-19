@@ -2,10 +2,41 @@ import SunLogo from "../assets/sun.png";
 import GitHubLogo from "../assets/github.png";
 import LinkedInLogo from "../assets/linkedin.png";
 
-import './FloatingHeader.css'
+import {library} from '@fortawesome/fontawesome-svg-core'
+import {faSun, faMoon} from '@fortawesome/free-solid-svg-icons'
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+library.add(faSun, faMoon)
 
+import './FloatingHeader.css'
+import {useEffect, useState} from "react";
 
 function FloatingHeader() {
+    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
+
+    useEffect(() => {
+        // Ensure DOM is fully loaded
+        const colorSwitch = document.getElementById('color-switch');
+        if (colorSwitch) {
+            colorSwitch.addEventListener('click', toggleTheme);
+        }
+
+        // Cleanup event listener
+        return () => {
+            if (colorSwitch) {
+                colorSwitch.removeEventListener('click', toggleTheme);
+            }
+        };
+    }, []);
+
+    const toggleTheme = () => {
+        setTheme((prevTheme) => (prevTheme === 'sunrise' ? 'dark' : 'sunrise'));
+    };
+
+    useEffect(() => {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme); // Save the theme in localStorage
+    }, [theme]);
+
     return (
         <header className="FloatingHeader">
             <div className="LogoContainer">
@@ -33,6 +64,7 @@ function FloatingHeader() {
                         <img className="Icons" src={LinkedInLogo} alt="LinkedIn logo"></img>
                         {/*<a href="https://www.flaticon.com/free-icons/brightness" title="brightness icons">Brightness icons created by Cap Cool - Flaticon</a>*/}
                     </a>
+                    <a id="color-switch"><FontAwesomeIcon icon="sun"/></a>
                 </div>
             </nav>
         </header>

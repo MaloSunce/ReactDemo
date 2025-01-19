@@ -3,6 +3,10 @@
     margin: 10% 3% auto 3%;
 }
 
+.Footer a {
+    color: var(--text-primary);
+}
+
 .ContactInfo h3, .ContactInfo p {
     margin-top: 0;
 }
