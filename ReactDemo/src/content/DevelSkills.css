@@ -8,10 +8,10 @@
     margin: auto;
 }
 
-.DevelSkills li {
-    transition: transform 0.2s;
+.SkillPreview {
+    transition: transform 0.5s ease-in-out;
 }
 
-.DevelSkills li:hover{
-    transform: scale(1.25);
+.SkillPreview:hover {
+    transform: scale(1.3);
 }

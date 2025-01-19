@@ -61,7 +61,7 @@ function TechSkills() {
                 {headerGroups.map((headerGroup) => (
                     <tr {...headerGroup.getHeaderGroupProps()}>
                         {headerGroup.headers.map((columns) => (
-                            <th {...columns.getHeaderProps()}>
+                            <th {...columns.getHeaderProps()} key={columns.id}>
                                 <h3>
                                     {columns.render("Header")}
                                 </h3>
@@ -73,7 +73,7 @@ function TechSkills() {
                 {rows.map((row, rowIndex) => {
                     prepareRow(row)
                     return (
-                        <tr {...row.getRowProps()}>
+                        <tr {...row.getRowProps()} key={row.id}>
                             {row.cells.map((cell) => {
                                 const accessor = cell.column.id; // Get the column's accessor (e.g., skillBackend, skillFrontend)
                                 const isBackend = accessor === "skillBackend";

@@ -1,27 +1,120 @@
 import './DevelSkills.css'
+import {useState} from "react";
 
 function DevelSkills() {
+
+    const [hoverID, setHoverID] = useState(-1);
+    const handleMouseOver = (id) => {
+        setHoverID(id);
+    };
+
+    const handleMouseOut = () => {
+        setHoverID(-1);
+    };
+
+
+    const [develSkills, setSkill] = useState([
+        {
+            title: "Mobile programming",
+            description: "Building and designing mobile apps using technologies like Kotlin, Dart, Jetpack Compose, " +
+                "Flutter, Figma, and more.",
+            id: 0
+        },
+        {
+            title: "Web development",
+            description: "Creating REST applications using JavaScript, HTML, CSS, and React, focusing on user-centered design.",
+            id: 1
+        },
+        {
+            title: "Cross-platform development",
+            description: "Building applications that run on multiple platforms, using cross-platform frameworks and containerization.",
+            id: 2
+        },
+        {
+            title: "User-centered design",
+            description: "Conducting user testing and developing with usability and accessibility to ensure an intuitive and inclusive design.",
+            id: 3
+        },
+        {
+            title: "Cloud technologies",
+            description: "Building scalable and flexible applications using cloud platforms like Google Cloud Platform",
+            id: 4
+        },
+        {
+            title: "API integration",
+            description: "Connecting existing APIs to systems and creating new APIs from scratch.",
+            id: 5
+        },
+        {
+            title: "Agile development methods",
+            description: "Working with agile development methods like Scrum and Kanban.",
+            id: 6
+        },
+        {
+            title: "Software security",
+            description: "Applying security measures such as hashing, IP whitelisting, memory access, thorough error handling, " +
+                "and designing and implementing databases with safeguards against unauthorized access.",
+            id: 7
+        },
+        {
+            title: "Documentation and testing",
+            description: "Writing clear and thorough documentation and conducting automated and manual testing to ensure " +
+                "quality and maintainability of code.",
+            id: 8
+        },
+        {
+            title: "Data modeling and database systems",
+            description: "Designing and implementing relational and non-relational databases to efficiently store, retrieve, " +
+                "and manipulate data.",
+            id: 9
+        },
+        {
+            title: "Containerization and virtualization",
+            description: "Using Docker to containerize applications and manage virtual machines for deployment. This includes " +
+                "practices like port forwarding, managing VM instances, and automating processes with scripts.",
+            id: 10
+        },
+        {
+            title: "Object-oriented programming",
+            description: "Designing software systems using OOP principles like inheritance, polymorphism, and encapsulation " +
+                "to create maintainable and reusable code.",
+            id: 11
+        },
+    ]);
+
+    // Display skills in two columns
     return (
         <div className="DevelSkills" id="DevelSkills">
             <h2>Software & Design Expertise</h2>
-            <b style={{fontSize: '1.4em'}}>Relevant areas of expertise...</b>
-            <div style={{display: 'flex', flexDirection: 'row', margin: '0 auto', paddingTop: '2%'}}>
-                <ul style={{textAlign: 'left'}}>
-                    <li>Mobile programming</li>
-                    <li>Web development and REST-applications</li>
-                    <li>Cross-platform development</li>
-                    <li>User centered design</li>
-                    <li>Cloud technologies</li>
-                    <li>API integration</li>
-                </ul>
-                <ul style={{textAlign: 'right'}}>
-                    <li>Agile development methods</li>
-                    <li>Software security</li>
-                    <li>Documentation and testing</li>
-                    <li>Data modeling and database systems</li>
-                    <li>Containerization and virtualization</li>
-                    <li>Object-oriented programming</li>
-                </ul>
+            <div style={{
+                display: 'flex',
+                height: '65%',
+                justifyContent: 'space-between',
+                marginLeft: '20%',
+                marginRight: '20%'
+            }}>
+                <div style={{textAlign: 'left', flex: 1}}>
+                    {develSkills.slice(0, Math.ceil(develSkills.length / 2)).map((skill) => (
+                        <div className="SkillPreview"
+                             key={skill.id}
+                             onMouseOver={() => handleMouseOver(skill.id)}
+                             onMouseOut={handleMouseOut}>
+                            <h3 style={{fontSize: '1.4em'}}>{skill.title}</h3>
+                            {hoverID === skill.id && (<p>{skill.description}</p>)}
+                        </div>
+                    ))}
+                </div>
+                <div style={{textAlign: 'right', flex: 1}}>
+                    {develSkills.slice(Math.ceil(develSkills.length / 2)).map((skill) => (
+                        <div className="SkillPreview"
+                             key={skill.id}
+                             onMouseOver={() => handleMouseOver(skill.id)}
+                             onMouseOut={handleMouseOut}>
+                            <h3 style={{fontSize: '1.4em'}}>{skill.title}</h3>
+                            {hoverID === skill.id && (<p>{skill.description}</p>)}
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );
