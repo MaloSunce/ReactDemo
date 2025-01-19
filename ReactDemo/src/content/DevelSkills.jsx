@@ -13,6 +13,7 @@ function DevelSkills() {
             title: "Mobile programming",
             description: "Building and designing mobile apps using technologies like Kotlin, Dart, Jetpack Compose, " +
                 "Flutter, Figma, and more.",
+            tags: ["Flutter", "Figma", "Jetpack Compose", "Kotlin", "Dart"],
             id: 0
         },
         {
@@ -42,7 +43,7 @@ function DevelSkills() {
         },
         {
             title: "Agile development methods",
-            description: "Working with agile development methods like Scrum and Kanban.",
+            description: "Working with agile and iterative development methods like Scrum and Kanban, using tools like Git, Jira, GanttProject, and Notion.",
             id: 6
         },
         {
@@ -87,44 +88,35 @@ function DevelSkills() {
                 marginLeft: '4%',
                 marginRight: '4%'
             }}>
-                <div style={{textAlign: 'left', flex: 2}}>
-                    {develSkills.slice(0, Math.ceil(develSkills.length / 2)).map((skill) => (
-                        <div key={skill.id}>
-                            {selectedID === skill.id && (
-                                <p className="SkillDescription"><b>{skill.title}</b><br/><br/>{skill.description}</p>)}
-                        </div>
-                    ))}
-                </div>
-
-                <div style={{textAlign: 'left', flex: 3}}>
-                    {develSkills.slice(0, Math.ceil(develSkills.length / 2)).map((skill) => (
-                        <div className="SkillTitle"
-                             key={skill.id}
-                             onMouseOver={() => handleMouseOver(skill.id)}>
-                            <h3 style={{fontSize: '1.4em'}}>{skill.title}</h3>
-                        </div>
-                    ))}
-                </div>
 
                 <div style={{textAlign: 'right', flex: 3}}>
-                    {develSkills.slice(Math.ceil(develSkills.length / 2)).map((skill) => (
-                        <div className="SkillTitle"
+                    {develSkills.slice(0, Math.ceil(develSkills.length / 2)).map((skill) => (
+                        <div className="SkillTitleLeft"
                              key={skill.id}
                              onMouseOver={() => handleMouseOver(skill.id)}>
-                            <h3 style={{fontSize: '1.4em'}}>{skill.title}</h3>
+                            <p style={{fontSize: '1.4em'}}>{skill.title}</p>
                         </div>
                     ))}
                 </div>
 
-                <div style={{textAlign: 'right', flex: 2}}>
-                    {develSkills.slice(Math.ceil(develSkills.length / 2)).map((skill) => (
+                <div style={{textAlign: 'center', flex: 2}}>
+                    {develSkills.slice(0, Math.ceil(develSkills.length)).map((skill) => (
                         <div key={skill.id}>
                             {selectedID === skill.id && (
-                                <p className="SkillDescription"><b>{skill.title}</b><br/><br/>{skill.description}</p>)}
+                                <p className="SkillDescription"><b style={{fontSize: '1.5em'}}>{skill.title}</b><br/><br/>{skill.description}</p>)}
                         </div>
                     ))}
                 </div>
 
+                <div style={{textAlign: 'left', flex: 3,  marginRight: '2%'}}>
+                    {develSkills.slice(Math.ceil(develSkills.length / 2)).map((skill) => (
+                        <div className="SkillTitleRight"
+                             key={skill.id}
+                             onMouseOver={() => handleMouseOver(skill.id)}>
+                            <p style={{fontSize: '1.4em'}}>{skill.title}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );
