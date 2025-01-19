@@ -3,9 +3,9 @@ import GitHubLogo from "../assets/github.png";
 import LinkedInLogo from "../assets/linkedin.png";
 
 import {library} from '@fortawesome/fontawesome-svg-core'
-import {faSun, faMoon} from '@fortawesome/free-solid-svg-icons'
+import {faSun, faMoon, faPalette} from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-library.add(faSun, faMoon)
+library.add(faSun, faMoon, faPalette)
 
 import './FloatingHeader.css'
 import {useEffect, useState} from "react";
@@ -29,7 +29,15 @@ function FloatingHeader() {
     }, []);
 
     const toggleTheme = () => {
-        setTheme((prevTheme) => (prevTheme === 'sunrise' ? 'dark' : 'sunrise'));
+        setTheme((prevTheme) => {
+            if (prevTheme === 'dark') {
+                return 'sunrise';
+            } else if (prevTheme === 'sunrise') {
+                return 'sunset';
+            } else {
+                return 'dark';
+            }
+        });
     };
 
     useEffect(() => {
@@ -64,7 +72,7 @@ function FloatingHeader() {
                         <img className="Icons" src={LinkedInLogo} alt="LinkedIn logo"></img>
                         {/*<a href="https://www.flaticon.com/free-icons/brightness" title="brightness icons">Brightness icons created by Cap Cool - Flaticon</a>*/}
                     </a>
-                    <a id="color-switch"><FontAwesomeIcon icon="sun"/></a>
+                    <a id="color-switch"><FontAwesomeIcon icon="palette"/></a>
                 </div>
             </nav>
         </header>
