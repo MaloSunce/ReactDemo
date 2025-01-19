@@ -3,15 +3,10 @@ import {useState} from "react";
 
 function DevelSkills() {
 
-    const [hoverID, setHoverID] = useState(-1);
+    const [selectedID, setSelectedID] = useState(1);
     const handleMouseOver = (id) => {
-        setHoverID(id);
+        setSelectedID(id);
     };
-
-    const handleMouseOut = () => {
-        setHoverID(-1);
-    };
-
 
     const [develSkills, setSkill] = useState([
         {
@@ -88,33 +83,48 @@ function DevelSkills() {
             <h2>Software & Design Expertise</h2>
             <div style={{
                 display: 'flex',
-                height: '65%',
                 justifyContent: 'space-between',
-                marginLeft: '20%',
-                marginRight: '20%'
+                marginLeft: '4%',
+                marginRight: '4%'
             }}>
-                <div style={{textAlign: 'left', flex: 1}}>
+                <div style={{textAlign: 'left', flex: 2}}>
                     {develSkills.slice(0, Math.ceil(develSkills.length / 2)).map((skill) => (
-                        <div className="SkillPreview"
-                             key={skill.id}
-                             onMouseOver={() => handleMouseOver(skill.id)}
-                             onMouseOut={handleMouseOut}>
-                            <h3 style={{fontSize: '1.4em'}}>{skill.title}</h3>
-                            {hoverID === skill.id && (<p>{skill.description}</p>)}
+                        <div key={skill.id}>
+                            {selectedID === skill.id && (
+                                <p className="SkillDescription"><b>{skill.title}</b><br/><br/>{skill.description}</p>)}
                         </div>
                     ))}
                 </div>
-                <div style={{textAlign: 'right', flex: 1}}>
+
+                <div style={{textAlign: 'left', flex: 3}}>
+                    {develSkills.slice(0, Math.ceil(develSkills.length / 2)).map((skill) => (
+                        <div className="SkillTitle"
+                             key={skill.id}
+                             onMouseOver={() => handleMouseOver(skill.id)}>
+                            <h3 style={{fontSize: '1.4em'}}>{skill.title}</h3>
+                        </div>
+                    ))}
+                </div>
+
+                <div style={{textAlign: 'right', flex: 3}}>
                     {develSkills.slice(Math.ceil(develSkills.length / 2)).map((skill) => (
-                        <div className="SkillPreview"
+                        <div className="SkillTitle"
                              key={skill.id}
-                             onMouseOver={() => handleMouseOver(skill.id)}
-                             onMouseOut={handleMouseOut}>
+                             onMouseOver={() => handleMouseOver(skill.id)}>
                             <h3 style={{fontSize: '1.4em'}}>{skill.title}</h3>
-                            {hoverID === skill.id && (<p>{skill.description}</p>)}
                         </div>
                     ))}
                 </div>
+
+                <div style={{textAlign: 'right', flex: 2}}>
+                    {develSkills.slice(Math.ceil(develSkills.length / 2)).map((skill) => (
+                        <div key={skill.id}>
+                            {selectedID === skill.id && (
+                                <p className="SkillDescription"><b>{skill.title}</b><br/><br/>{skill.description}</p>)}
+                        </div>
+                    ))}
+                </div>
+
             </div>
         </div>
     );
