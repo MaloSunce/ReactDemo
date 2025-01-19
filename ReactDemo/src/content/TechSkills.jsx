@@ -126,7 +126,7 @@ function TechSkills() {
                     color: 'var(--accent-secondary)',
                     marginTop: '4%',
                     alignSelf: 'end'}}
-            >Ranking of proficiency on a scale from 1 to 5.</p>
+            >*Ranking of proficiency on a scale from 1 to 5.</p>
         </div>
     );
 }
