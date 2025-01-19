@@ -28,29 +28,9 @@ function TechSkills() {
 
     const maxLength = Math.max(backend.length, frontend.length, other.length);
 
-    // Generate set of 5 dots representing the proficiency of each skill
-    const proficiency = (prof) => {
-        const maxLevel = 5;
-        const filled = '● '.repeat(prof);
-        const empty = '● '.repeat(maxLevel - prof);
-
-        return (
-            <>
-                {filled.split(' ').map((dot, index) => (
-                    <span key={`filled-${index}`} style={{color: 'var(--text-primary)'}}> {dot} </span>
-                ))}
-                {empty.split(' ').map((dot, index) => (
-                    <span key={`empty-${index}`} style={{color: 'var(--accent-secondary)'}}> {dot} </span>
-                ))}
-            </>
-        );
-    };
-
     const data = Array.from({length: maxLength}).map((_, index) => ({
         skillBackend: backend[index]?.[0] || "",
-        profBack: proficiency(backend[index]?.[1] || 0),  // Convert proficiency to dots
         skillFrontend: frontend[index]?.[0] || "",
-        profFront: proficiency(frontend[index]?.[1] || 0), // Convert proficiency to dots
         skillOther: other[index] || "",
     }));
 
@@ -61,24 +41,8 @@ function TechSkills() {
             accessor: "skillBackend",
         },
         {
-            Header: "",
-            accessor: "profBack"
-        },
-        {
-            Header: "",
-            accessor: "blank1"
-        },
-        {
             Header: "Front-end",
             accessor: "skillFrontend",
-        },
-        {
-            Header: "",
-            accessor: "profFront"
-        },
-        {
-            Header: "",
-            accessor: "blank2"
         },
         {
             Header: "Other",
@@ -107,15 +71,51 @@ function TechSkills() {
                         </tr>))}
                     </thead>
                     <tbody {...getTableBodyProps()}>
-                    {rows.map((row) => {
+                    {rows.map((row, rowIndex) => {
                         prepareRow(row)
                         return (
                             <tr {...row.getRowProps()}>
-                                {row.cells.map((cell) => (
-                                    <td {...cell.getCellProps()}> {cell.render("Cell")} </td>
-                                ))}
-                            </tr>)
-                    })}
+                                {row.cells.map((cell) => {
+                                    const accessor = cell.column.id; // Get the column's accessor (e.g., skillBackend, skillFrontend)
+                                    const isBackend = accessor === "skillBackend";
+                                    const isFrontend = accessor === "skillFrontend";
+
+                                    return (
+                                        <td {...cell.getCellProps()}>
+                                            {cell.render("Cell")}
+
+                                            {/* Render proficiency bars for backend and frontend */}
+                                            {(isBackend || isFrontend) && (
+                                                <div style={{ display: 'flex', gap: '5px', marginTop: '3px' }}>
+                                                    {/* Determine which column is currently being rendered */}
+                                                    {Array((isBackend ? backend[rowIndex]?.[1] : frontend[rowIndex]?.[1]) || 0)
+                                                        .fill(null)
+                                                        .map((_, barIndex) => (
+                                                            <div
+                                                                key={`filled-${barIndex}`}
+                                                                style={{
+                                                                    backgroundColor: 'var(--accent)',
+                                                                    width: '30px',
+                                                                    height: '15px',
+                                                                    borderRadius: '5px',
+                                                                }}
+                                                            ></div>
+                                                        ))}
+                                                    {Array(5 - ((isBackend ? backend[rowIndex]?.[1] : frontend[rowIndex]?.[1]) || 5))
+                                                        .fill(null)
+                                                        .map((_, barIndex) => (
+                                                            <div
+                                                                key={`empty-${barIndex}`}
+                                                                style={{
+                                                                    backgroundColor: 'transparent',
+                                                                    border: '2px solid var(--accent)',
+                                                                    width: '30px',
+                                                                    height: '15px',
+                                                                    borderRadius: '5px',}}
+                                                            ></div>))}
+                                                </div>)}
+                                        </td>);})}
+                            </tr>)})}
                     </tbody>
                 </table>
             </div>

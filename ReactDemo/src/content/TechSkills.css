@@ -23,4 +23,5 @@ table th {
     white-space: nowrap;
     word-break: break-word;
     text-align: center;
+    width: 500px;
 }
