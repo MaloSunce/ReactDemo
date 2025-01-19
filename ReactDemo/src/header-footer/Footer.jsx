@@ -25,7 +25,7 @@ function Footer() {
                 </div>
             </div>
 
-            <hr className="solid"/>
+            <hr className="solid" style={{color: 'var(--accent)'}}/>
 
             <p style={{paddingBottom: '40px', color: 'var(--text-secondary)', marginTop: '0'}}> &copy; {new Date().getFullYear()} MaloSunce </p>
         </footer>

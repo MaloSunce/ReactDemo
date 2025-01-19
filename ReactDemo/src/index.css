@@ -16,7 +16,7 @@
   --secondary-container: #1e1e1e;
   --accent: #333333;
   --accent-secondary: #484848;
-  --darkest: #000000;
+  --header-overlay: Transparent;
 }
 
 /* Light theme */
@@ -28,7 +28,7 @@
   --secondary-container: #FFB700;
   --accent: #FFC300;
   --accent-secondary: #FFD000;
-  --darkest: #FFDD00;
+  --header-overlay: rgba(255, 123, 0, 0.3);
 }
 
 html {
