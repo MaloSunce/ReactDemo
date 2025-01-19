@@ -6,8 +6,11 @@ import TechSkills from './content/TechSkills.jsx'
 import DevelSkills from './content/DevelSkills.jsx'
 import AboutMe from './content/AboutMe.jsx'
 import Projects from "./content/Projects.jsx";
+import FloatingHeader from "./header-footer/FloatingHeader.jsx";
+
 
 import "./index.css"
+import "./header-footer/FloatingHeader.css"
 
 import ToTopIcon from "./assets/sun_white.png";
 
@@ -27,7 +30,10 @@ function App() {
             // Check scroll position
             if (window.scrollY > (window.innerHeight - 100)) {
                 setIsVisible(true);
-            } else {
+            } else if (window.scrollY > (window.innerHeight * 1.2)) {
+                setIsVisible(false);
+            }
+            else {
                 setIsVisible(false);
             }
         };
@@ -40,8 +46,8 @@ function App() {
 
     return (
         <div className="App">
-            <div className={`SideMenu ${isVisible ? 'visible' : ''}`}>
-                <a href="#"><img className="ToTopIcon" src={ToTopIcon} alt="Sun logo white"/> </a>
+            <div className={`HeaderVisibility ${isVisible ? 'visible' : ''}`}>
+                <FloatingHeader className={`FloatingHeader ${isVisible ? 'visible' : ''}`}/>
             </div>
 
             <Header/>

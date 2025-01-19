@@ -69,30 +69,14 @@ a {
   color: white;
 }
 
-.SideMenu {
+.HeaderVisibility {
   position: fixed;
-  right: 3.5%;
-  margin: 0;
+  width: 100%;
+  margin: 10px 0;
   opacity: 0;
   transition: opacity 0.3s;
 }
 
-.SideMenu.visible {
+.HeaderVisibility.visible {
   opacity: 1;
 }
-
-.ToTopIcon {
-  position: absolute;
-  width: 6em;
-  height: auto;
-  left: -130%;
-  transform: translateX(-50%);
-  padding-top: 10px;
-  transition: transform 0.3s ease;
-}
-
-.ToTopIcon:hover {
-  transform: scale(1.1) translateX(-50%);
-  transform-origin: center;
-}
-

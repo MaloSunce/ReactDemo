@@ -28,7 +28,7 @@ function DevelSkills() {
         },
         {
             title: "User-centered design",
-            description: "Conducting user testing and developing with usability and accessibility to ensure an intuitive and inclusive design.",
+            description: "Conducting user testing and developing with usability and accessibility to ensure intuitive and inclusive design.",
             id: 3
         },
         {
