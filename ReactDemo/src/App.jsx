@@ -28,12 +28,11 @@ function App() {
     useEffect(() => {
         const handleScroll = () => {
             // Check scroll position
-            if (window.scrollY > (window.innerHeight - 100)) {
-                setIsVisible(true);
-            } else if (window.scrollY > (window.innerHeight * 1.2)) {
+            if (window.scrollY > window.innerHeight * 4.6) {
                 setIsVisible(false);
-            }
-            else {
+            } else if (window.scrollY > window.innerHeight - 100) {
+                setIsVisible(true);
+            } else {
                 setIsVisible(false);
             }
         };
