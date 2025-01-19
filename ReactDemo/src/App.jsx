@@ -28,7 +28,10 @@ function App() {
     useEffect(() => {
         const handleMouseMove = (event) => {
             // Check if the mouse is within the top 50 pixels of the page
-            if (event.clientY <= 50 && (window.scrollY > window.innerHeight - 100)) {
+            if (event.clientY <= 50 &&
+                (window.scrollY > window.innerHeight - 100)
+                && (window.scrollY < (window.innerHeight * 4.6))
+            ) {
                 setIsVisible(true);
             } else {
                 setIsVisible(false);

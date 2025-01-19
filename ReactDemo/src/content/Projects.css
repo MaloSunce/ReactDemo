@@ -13,14 +13,14 @@
     width: 120px;
     margin: 0 auto;
     display: block;
-   padding-top: 10%;
+    padding-top: 5%;
 }
 
 .Card {
     display: flex !important;
     flex-direction: column;
     background-color: Transparent;
-    height: 500px;
+    height: 450px;
     box-shadow: 8px 8px;
     border-radius: 20px;
     justify-content: space-between;
@@ -37,10 +37,6 @@
     display: flex !important;
     justify-content: center;
     align-items: center;
-}
-
-.slick-prev, .slick-next {
-    z-index: 1000;
 }
 
 .slick-prev {
