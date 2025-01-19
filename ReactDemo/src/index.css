@@ -31,6 +31,18 @@
   --header-overlay: rgba(255, 123, 0, 0.3);
 }
 
+/* Medium theme */
+[data-theme='sunset'] {
+  --background: #240046;
+  --text-primary: #FF6D00;
+  --text-secondary: #FF9E00;
+  --primary-container: #5A189A;
+  --secondary-container: #3C096C;
+  --accent: #FF7900;
+  --accent-secondary: #FF9100;
+  --header-overlay: rgba(36, 0, 70, 0.3);
+}
+
 html {
   width: 100%;
   scroll-behavior: smooth;

@@ -11,7 +11,7 @@ import './FloatingHeader.css'
 import {useEffect, useState} from "react";
 
 function FloatingHeader() {
-    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
+    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'default');
 
     useEffect(() => {
         // Ensure DOM is fully loaded
