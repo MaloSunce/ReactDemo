@@ -55,7 +55,7 @@ function TechSkills() {
 
     return (
         <div className="TechSkills" id="TechSkills">
-            <h2 style={{marginBottom: '1%'}}>Technical Skills</h2>
+            <h2 style={{marginBottom: '3%', marginTop: '7%'}}>Technical Skills</h2>
             <table {...getTableProps()} style={{width: '100%'}}>
                 <thead>
                 {headerGroups.map((headerGroup) => (
@@ -121,6 +121,12 @@ function TechSkills() {
                 })}
                 </tbody>
             </table>
+            <p style={{
+                    fontSize: '0.8em',
+                    color: 'var(--accent-secondary)',
+                    marginTop: '4%',
+                    alignSelf: 'end'}}
+            >Ranking of proficiency on a scale from 1 to 5.</p>
         </div>
     );
 }

@@ -10,12 +10,10 @@
     scroll-snap-align: start;
     padding: 40px;
     width: 75%;
-
     margin: auto;
 }
 
 .AboutMe h2, h3, p {
-    gap: 0;
     margin: 20px;
     padding: 0;
 }

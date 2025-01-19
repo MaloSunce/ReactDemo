@@ -3,13 +3,13 @@
     flex-direction: column;
     height: 100vh;
     scroll-snap-align: start;
-    margin: auto;
+    margin: 5% auto;
     align-items: center;
     justify-content: center;
 }
 
 .TechSkills h3 {
-    margin: auto 0 auto 0;
+    margin: auto;
 }
 
 .TechSkills table {
@@ -17,7 +17,7 @@
 }
 
 table th, table td {
-    padding-bottom: 20px;
+    padding-bottom: 18px;
     text-align: left !important;
     max-width:80%;
     white-space:nowrap;
