@@ -53,7 +53,6 @@ function App() {
             <div className={`HeaderVisibility ${isVisible ? 'visible' : ''}`}>
                 <FloatingHeader className={`FloatingHeader ${isVisible ? 'visible' : ''}`}/>
             </div>
-
             <Header/>
             <AboutMe/>
             <TechSkills/>

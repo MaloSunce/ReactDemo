@@ -4,11 +4,12 @@
     flex-direction: column;
     scroll-snap-align: start;
     padding: 40px;
-    width: 100%;
+    width: 100vw;
     transition: 1s;
     justify-content: center;
     align-content: start;
-    margin: auto 10%;
+    margin: auto;
+    overflow-x: hidden !important;
 }
 
 .AboutMe h2, h3, p {
@@ -31,6 +32,7 @@ img {
 
 .Description {
     width: 70%;
+    margin: auto 10%;
 }
 
 .Box1 {;
