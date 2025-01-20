@@ -46,7 +46,7 @@ function TechSkills() {
         },
         {
             Header: "Other",
-            accessor: "skillOther"
+            accessor: "skillOther",
         },
     ], []);
 
@@ -85,13 +85,12 @@ function TechSkills() {
 
                                         {/* Render proficiency bars for backend and frontend */}
                                         {(isBackend || isFrontend) && (
-                                            <div
-                                                style={{display: 'flex', gap: '5px', marginTop: '3px', width: '220px'}}>
+                                            <div style={{display: 'flex', gap: '5px', marginTop: '3px', width: '220px'}}>
                                                 {/* Determine which column is currently being rendered */}
                                                 {Array((isBackend ? backend[rowIndex]?.[1] : frontend[rowIndex]?.[1]) || 0)
                                                     .fill(null)
                                                     .map((_, barIndex) => (
-                                                        <div
+                                                        <div className="Proficiency"
                                                             key={`filled-${barIndex}`}
                                                             style={{
                                                                 backgroundColor: 'var(--accent)',
@@ -104,7 +103,7 @@ function TechSkills() {
                                                 {Array(5 - ((isBackend ? backend[rowIndex]?.[1] : frontend[rowIndex]?.[1]) || 5))
                                                     .fill(null)
                                                     .map((_, barIndex) => (
-                                                        <div
+                                                        <div className="Proficiency"
                                                             key={`empty-${barIndex}`}
                                                             style={{
                                                                 backgroundColor: 'transparent',

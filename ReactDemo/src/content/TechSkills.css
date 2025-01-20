@@ -21,4 +21,24 @@ table th, table td {
     text-align: left !important;
     max-width:80%;
     white-space:nowrap;
+    transition: 1s;
+}
+
+.Proficiency {
+    transition: 1s;
+}
+
+@media only screen and (max-width: 600px) {
+    .Proficiency {
+        width: 10% !important;
+        height: 15px !important;
+        transition: 1s;
+    }
+
+    table th, table td {
+        padding: 0 0 5px;
+        width: 25% !important;
+        max-width: 40% !important;
+        transition: 1s;
+    }
 }
