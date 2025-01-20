@@ -3,10 +3,10 @@ import GitHubLogo from "../assets/github.png";
 import LinkedInLogo from "../assets/linkedin.png";
 
 import {library} from '@fortawesome/fontawesome-svg-core'
-import {faSun, faMoon, faBars} from '@fortawesome/free-solid-svg-icons'
+import {faSun, faMoon, faBars, faClose} from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-library.add(faSun, faMoon, faBars)
+library.add(faSun, faMoon, faBars, faClose)
 
 import './FloatingHeader.css'
 import {useEffect, useRef, useState} from "react";
@@ -69,7 +69,7 @@ function FloatingHeader() {
                 <a href="#Projects">Projects</a>
                 <a href="#Footer">Contact</a>
 
-                <div style={{display: 'flex', gap: '1.7em', paddingRight: '2%'}}>
+                <div style={{display: 'flex', gap: '1.7em'}}>
                     <a href="https://github.com/MaloSunce?tab=repositories" target="_blank">
                         <img className="Icons" src={GitHubLogo} alt="GitHub logo"></img>
                         {/*<dir className="Logo"><img src="../assets/sun.png" alt="Sun Icon"> </img></dir>*/}
@@ -79,8 +79,8 @@ function FloatingHeader() {
                         {/*<a href="https://www.flaticon.com/free-icons/brightness" title="brightness icons">Brightness icons created by Cap Cool - Flaticon</a>*/}
                     </a>
                     {/*<a id="color-switch"><FontAwesomeIcon icon="palette"/></a>*/}
-                    <button onClick={showNavbar} className="NavBtn NavBtnClose"><FontAwesomeIcon icon="bars"/></button>
                 </div>
+                <button onClick={showNavbar} className="NavBtn NavBtnClose"><FontAwesomeIcon icon="close"/></button>
             </nav>
             <button onClick={showNavbar} className="NavBtn"><FontAwesomeIcon icon="bars"/></button>
         </header>
