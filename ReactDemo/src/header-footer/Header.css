@@ -27,7 +27,7 @@ h1 {
     height: 35%;
 }
 
-.Nav {
+.Header .Nav {
     grid-area: nav;
     display: grid;
     grid-template-columns: repeat(7, auto);
@@ -38,12 +38,12 @@ h1 {
     font-size: 1.2em;
 }
 
-.Nav a {
+.Header .Nav a {
     transition: transform 0.2s;
     text-align: center;
 }
 
-.Nav a:hover {
+.Header .Nav a:hover {
     transform: scale(1.2);
 }
 

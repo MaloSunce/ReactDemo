@@ -10,7 +10,6 @@
     width: 100%;
     padding: 0;
     z-index: 1000 !important;
-    /*background-color: var(--secondary-container);*/
     background-image: linear-gradient(var(--secondary-container), Transparent);
 }
 
@@ -26,8 +25,18 @@
 }
 
 .FloatingHeader .Icons {
-    width: 1.5em;
+    width: 1.6rem;
     height: auto;
+}
+
+.FloatingHeader .Nav a {
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+.FloatingHeader .Nav a:hover {
+    transform: scale(1.2);
+    color: var(--text-primary) !important;
 }
 
 .FloatingHeader .Nav {
@@ -36,8 +45,51 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    font-size: 1em;
+    font-size: 1rem;
     flex-wrap: nowrap;
     text-wrap: nowrap;
     gap: 47px;
+}
+
+.NavBtn {
+    padding-right: 20px;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    background-color: Transparent;
+    border: none;
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 1024px) {
+    .NavBtn {
+        visibility: visible;
+        opacity: 1;
+        color: var(--text-secondary);
+    }
+
+    .FloatingHeader .Nav {
+        z-index: 1000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        background-color: var(--primary-container);
+        transition: 1s;
+        transform: translateY(-100vh);
+    }
+
+    .ResponsiveNav {
+        transform: none;
+    }
+
+    .NavBtnClose {
+
+    }
 }

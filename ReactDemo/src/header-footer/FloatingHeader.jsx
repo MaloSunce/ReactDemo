@@ -3,12 +3,13 @@ import GitHubLogo from "../assets/github.png";
 import LinkedInLogo from "../assets/linkedin.png";
 
 import {library} from '@fortawesome/fontawesome-svg-core'
-import {faSun, faMoon, faPalette} from '@fortawesome/free-solid-svg-icons'
+import {faSun, faMoon, faBars} from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-library.add(faSun, faMoon, faPalette)
+
+library.add(faSun, faMoon, faBars)
 
 import './FloatingHeader.css'
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
 function FloatingHeader() {
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'default');
@@ -45,18 +46,23 @@ function FloatingHeader() {
         localStorage.setItem('theme', theme); // Save the theme in localStorage
     }, [theme]);
 
+    const navRef = useRef();
+    const showNavbar = () => {
+        navRef.current.classList.toggle("ResponsiveNav");
+    }
+
     return (
         <header className="FloatingHeader">
             <div className="LogoContainer">
-                <h1 style={{fontSize: '2em'}}><a href="#">MaloSunce</a></h1>
+                <h1 style={{fontSize: '1.6em'}}><a href="#">MaloSunce</a></h1>
                 <img
                     src={SunLogo}
                     alt="Sun logo"
-                    style={{width: '1.7em', height: '1.7em', marginBottom: '3%'}}
+                    style={{width: '1.5em', height: '1.5em', marginBottom: '3%'}}
                     title="Brightness icons created by Cap Cool - Flaticon"
                 />
             </div>
-            <nav className="Nav">
+            <nav className="Nav" ref={navRef}>
                 <a href="#AboutMe">About me</a>
                 <a href="#TechSkills">Technical skills</a>
                 <a href="#DevelSkills">Software & Design Expertise</a>
@@ -73,8 +79,10 @@ function FloatingHeader() {
                         {/*<a href="https://www.flaticon.com/free-icons/brightness" title="brightness icons">Brightness icons created by Cap Cool - Flaticon</a>*/}
                     </a>
                     {/*<a id="color-switch"><FontAwesomeIcon icon="palette"/></a>*/}
+                    <button onClick={showNavbar} className="NavBtn NavBtnClose"><FontAwesomeIcon icon="bars"/></button>
                 </div>
             </nav>
+            <button onClick={showNavbar} className="NavBtn"><FontAwesomeIcon icon="bars"/></button>
         </header>
     );
 }
