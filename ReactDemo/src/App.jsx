@@ -12,10 +12,10 @@ import FloatingHeader from "./header-footer/FloatingHeader.jsx";
 import "./index.css"
 import "./header-footer/FloatingHeader.css"
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faUser, faTools, faPencil, faPhone, faComputer } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {library} from '@fortawesome/fontawesome-svg-core'
+import {fab} from '@fortawesome/free-brands-svg-icons'
+import {faUser, faTools, faPencil, faPhone, faComputer} from '@fortawesome/free-solid-svg-icons'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 library.add(fab, faUser, faTools, faPencil, faPhone, faComputer)
 
@@ -23,18 +23,23 @@ function App() {
 
     // Set visibility for back-to-top icon based on scroll
     const [isVisible, setIsVisible] = useState(false);
+    const mediaMaxWidth = 1024;
     useEffect(() => {
         const handleMouseMove = (event) => {
-            // Check if the mouse is within the top 50 pixels of the page
-            setIsVisible(true);
-            /*if (event.clientY <= 50 &&
-                (window.scrollY > window.innerHeight - 100)
-                && (window.scrollY < (window.innerHeight * 4.6))
-            ) {
+            // Display header when mouse is at top of screen when in full screen
+            if (event.clientY <= 50 &&
+                window.scrollY > window.innerHeight - 100 &&
+                window.scrollY < (window.innerHeight * 4.6) &&
+                window.innerWidth  >= mediaMaxWidth) {
+                setIsVisible(true);
+            } else if ( // Always display header on smaller windows
+                (window.innerWidth  < mediaMaxWidth &&
+                window.scrollY > window.innerHeight - 100) &&
+                window.scrollY < (window.innerHeight * 4.6)) {
                 setIsVisible(true);
             } else {
                 setIsVisible(false);
-            }*/
+            }
         };
 
         window.addEventListener('mousemove', handleMouseMove);
@@ -44,8 +49,7 @@ function App() {
         };
     }, []);
 
-    return (
-        <div className="App">
+    return (<div className="App">
             <div className={`HeaderVisibility ${isVisible ? 'visible' : ''}`}>
                 <FloatingHeader className={`FloatingHeader ${isVisible ? 'visible' : ''}`}/>
             </div>
@@ -56,8 +60,7 @@ function App() {
             <DevelSkills/>
             <Projects/>
             <Footer/>
-        </div>
-    );
+        </div>);
 }
 
 export default App

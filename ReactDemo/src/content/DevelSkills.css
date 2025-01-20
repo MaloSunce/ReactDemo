@@ -13,6 +13,7 @@
     white-space: nowrap;
     padding: 0 0 0.5% 0;
     color: var(--text-secondary);
+    font-size: 0.8rem;
 }
 
 .SkillTitleLeft:hover {
@@ -29,7 +30,7 @@
     border-radius: 10px;
     border: 2px solid var(--accent);
     padding: 20px;
-    height: 380px;
+    height: 350px;
     max-height: 100%;
     line-height: 30px;
 }
