@@ -1,18 +1,14 @@
 .AboutMe {
     height: 100vh;
-    display: grid;
-    grid-template-areas:
-        "Title Title Image"
-        "Description Description Image"
-        "Box1 Box1 Image";
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: 1fr 1fr 0.9fr;
+    display: flex;
+    flex-direction: column;
     scroll-snap-align: start;
     padding: 40px;
-    width: 70%;
-    margin: auto 5% auto 10%;
+    width: 100%;
     transition: 1s;
     justify-content: center;
+    align-content: start;
+    margin: auto 10%;
 }
 
 .AboutMe h2, h3, p {
@@ -20,37 +16,44 @@
     padding: 0;
 }
 
-.AboutMe .Title {
-    grid-area: Title;
-    align-self: end;
+.AboutMe p {
+    text-align: justify;
 }
 
-.AboutMe img {
-    grid-area: Image;
-    width: 100%;
-    height: auto;
-    align-self: center;
+img {
+    width: 40%;
+    max-width: 400px;
+    float: right;
+    margin-left: 5%;
 }
+
 
 .Description {
-    grid-area: Description;
     width: 70%;
 }
 
-.Box1 {
-    grid-area: Box1;
+.Box1 {;
     font-size: 1.5rem;
     margin-left: 20px;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
     .AboutMe {
+        align-content: center !important;
         margin: 0;
         padding: 0;
         transition: 1s;
     }
 
-    .AboutMe h3 {
-        white-space: nowrap;
+    .Description {
+        width: 100%;
+        transition: 1s;
+    }
+
+    img {
+        width: 30%;
+        margin-right: 5%;
+        margin-top: 20%;
+        transition: 1s;
     }
 }
