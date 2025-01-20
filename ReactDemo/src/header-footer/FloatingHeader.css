@@ -56,10 +56,18 @@
 }
 
 @media only screen and (max-width: 1024px) {
-    .NavBtn {
+    .FloatingHeader .NavBtn {
         visibility: visible;
         opacity: 1;
         color: var(--text-secondary);
+    }
+
+    .Header .NavBtn {
+        visibility: visible;
+        opacity: 1;
+        grid-area: Nav;
+        color: var(--text-primary);
+        font-size: 1.5rem;
     }
 
     .FloatingHeader {
@@ -67,7 +75,7 @@
         z-index: 2000 !important;
     }
 
-    .FloatingHeader .Nav {
+    .FloatingHeader .Nav, .Header .Nav {
         z-index: 1000 !important;
         position: fixed;
         top: 0;
@@ -80,9 +88,16 @@
         align-items: center;
         justify-content: center;
         gap: 1.7rem;
-        background-color: var(--primary-container);
         transition: 1s;
         transform: translateY(-100vh);
+    }
+
+    .FloatingHeader .Nav {
+        background-color: var(--primary-container);
+    }
+
+    .Header .Nav {
+        background-color: rgba(0, 0, 0, 0.8);
     }
 
     .ResponsiveNav {

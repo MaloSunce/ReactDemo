@@ -2,9 +2,24 @@ import "./Header.css"
 import GitHubLogo from '../assets/github.png'
 import LinkedInLogo from '../assets/linkedin.png'
 import SunLogo from '../assets/sun.png'
-import SunLogoBlack from '../assets/sun_black.png'
+import './FloatingHeader.css'
+
+import {useRef} from "react";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 function Header() {
+
+    const navRef = useRef();
+    const showNavbar = () => {
+        navRef.current.classList.toggle("ResponsiveNav");
+
+        // Prevent scrolling on the body when the nav is active
+        if (navRef.current.classList.contains("ResponsiveNav")) {
+            document.body.classList.add("no-scroll");
+        } else {
+            document.body.classList.remove("no-scroll");
+        }
+    }
 
     return (
         <header className="Header">
@@ -17,7 +32,7 @@ function Header() {
                     title="Brightness icons created by Cap Cool - Flaticon"
                 />
             </div>
-            <nav className="Nav">
+            <nav className="Nav" ref={navRef}>
                 <a href="#AboutMe">About me</a>
                 <a href="#TechSkills">Technical skills</a>
                 <a href="#DevelSkills">Software & Design Expertise</a>
@@ -34,7 +49,9 @@ function Header() {
                         {/*<a href="https://www.flaticon.com/free-icons/brightness" title="brightness icons">Brightness icons created by Cap Cool - Flaticon</a>*/}
                     </a>
                 </div>
+                <button onClick={showNavbar} className="NavBtn NavBtnClose"><FontAwesomeIcon icon="close"/></button>
             </nav>
+            <button onClick={showNavbar} className="NavBtn"><FontAwesomeIcon icon="bars"/></button>
             <img className="SunLogo" src={SunLogo} alt="Sun logo" style={{width: '22em', height: 'auto'}} title="Brightness icons created by Cap Cool - Flaticon"/>
             {/*<a href="https://www.flaticon.com/free-icons/brightness" title="brightness icons">Brightness icons created by Cap Cool - Flaticon</a>*/}
         </header>
