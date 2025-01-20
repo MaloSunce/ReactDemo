@@ -52,7 +52,7 @@ function Header() {
                 <button onClick={showNavbar} className="NavBtn NavBtnClose"><FontAwesomeIcon icon="close"/></button>
             </nav>
             <button onClick={showNavbar} className="NavBtn"><FontAwesomeIcon icon="bars"/></button>
-            <img className="SunLogo" src={SunLogo} alt="Sun logo" style={{width: '22em', height: 'auto'}} title="Brightness icons created by Cap Cool - Flaticon"/>
+            <img className="SunLogo" src={SunLogo} alt="Sun logo" style={{width: '22em', height: 'auto', margin: '0'}} title="Brightness icons created by Cap Cool - Flaticon"/>
             {/*<a href="https://www.flaticon.com/free-icons/brightness" title="brightness icons">Brightness icons created by Cap Cool - Flaticon</a>*/}
         </header>
     );
