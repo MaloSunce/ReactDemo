@@ -25,14 +25,9 @@ function Header() {
         <header className="Header">
             <div className="LogoContainer">
                 <h1><a href="#">MaloSunce</a></h1>
-                <img
+                <img className="SmallLogo"
                     src={SunLogo}
                     alt="Sun logo"
-                    style={{
-                        width: '2em',
-                        height: '2em',
-                        marginBottom: '3%',
-                        marginLeft: '0'}}
                     title="Brightness icons created by Cap Cool - Flaticon"
                 />
             </div>

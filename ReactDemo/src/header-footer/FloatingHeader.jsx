@@ -62,12 +62,7 @@ function FloatingHeader() {
         <header className="FloatingHeader">
             <div className="LogoContainer">
                 <h1 style={{fontSize: '1.6em'}}><a href="#">MaloSunce</a></h1>
-                <img
-                    src={SunLogo}
-                    alt="Sun logo"
-                    style={{width: '1.5em', height: '1.5em', marginBottom: '3%'}}
-                    title="Brightness icons created by Cap Cool - Flaticon"
-                />
+                <img src={SunLogo} alt="Sun logo" title="Brightness icons created by Cap Cool - Flaticon"/>
             </div>
             <nav className="Nav" ref={navRef}>
                 <a href="#AboutMe">About me</a>

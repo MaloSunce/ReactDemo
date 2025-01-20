@@ -28,6 +28,13 @@ h1 {
     width: 100%;
 }
 
+.SmallLogo {
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 3%;
+    margin-left: 0 !important;
+}
+
 .Header .Nav {
     grid-area: nav;
     display: grid;

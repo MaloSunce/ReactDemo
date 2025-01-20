@@ -5,7 +5,7 @@
     top: 0;
     left: 0;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     height: 8vh;
     width: 100%;
     padding: 0;
@@ -14,6 +14,13 @@
 
 .FloatingHeader a {
     color: var(--text-secondary) !important;
+}
+
+.FloatingHeader img {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-bottom: 3%;
+    margin-left: 0 !important;
 }
 
 .FloatingHeader .LogoContainer {
