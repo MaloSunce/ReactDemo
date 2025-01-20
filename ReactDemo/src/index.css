@@ -95,3 +95,7 @@ a {
 .HeaderVisibility.visible {
   opacity: 1;
 }
+
+.no-scroll { /* Only active when ResponsiveNav is displayed */
+  overflow: hidden;
+}

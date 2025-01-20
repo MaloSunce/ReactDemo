@@ -49,6 +49,13 @@ function FloatingHeader() {
     const navRef = useRef();
     const showNavbar = () => {
         navRef.current.classList.toggle("ResponsiveNav");
+
+        // Prevent scrolling on the body when the nav is active
+        if (navRef.current.classList.contains("ResponsiveNav")) {
+            document.body.classList.add("no-scroll");
+        } else {
+            document.body.classList.remove("no-scroll");
+        }
     }
 
     return (

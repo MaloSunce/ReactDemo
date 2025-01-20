@@ -69,7 +69,7 @@ function Projects() {
     return (
         <div className="Projects" id="Projects">
             <h2 style={{paddingTop: '20px'}}>Projects</h2>
-            <Slider {...settings} className="Slider">
+            <Slider {...settings}>
                 {cardItems.map((cardItem) => (
                     <div className="Card">
                         <img src={SunLogo} alt="Placeholder image"></img>
