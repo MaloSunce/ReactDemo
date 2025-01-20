@@ -14,13 +14,14 @@
 
 .TechSkills table {
     padding: 0 13% 0 20%;
+    transition: 1s;
 }
 
 table th, table td {
     padding-bottom: 18px;
     text-align: left !important;
     max-width:80%;
-    white-space:nowrap;
+    white-space: nowrap;
     transition: 1s;
 }
 
@@ -34,11 +35,22 @@ table th, table td {
         height: 15px !important;
         transition: 1s;
     }
+    .TechSkills table {
+        table-layout: fixed;
+        width: 100%;
+        margin-top: 10%;
+        padding: 0 4%;
+        transition: 1s;
+    }
 
     table th, table td {
-        padding: 0 0 5px;
-        width: 25% !important;
-        max-width: 40% !important;
+        padding-bottom: 3%;
+        transition: 1s;
+        width: 100%;
+    }
+
+    p {
+        align-self: start !important;
         transition: 1s;
     }
 }
