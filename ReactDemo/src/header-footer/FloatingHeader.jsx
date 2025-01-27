@@ -65,11 +65,11 @@ function FloatingHeader() {
                 <img src={SunLogo} alt="Sun logo" title="Brightness icons created by Cap Cool - Flaticon"/>
             </div>
             <nav className="Nav" ref={navRef}>
-                <a href="#AboutMe">About me</a>
-                <a href="#TechSkills">Technical skills</a>
-                <a href="#DevelSkills">Software & Design Expertise</a>
-                <a href="#Projects">Projects</a>
-                <a href="#Footer">Contact</a>
+                <a href="#AboutMe" onClick={showNavbar}>About me</a>
+                <a href="#TechSkills" onClick={showNavbar}>Technical skills</a>
+                <a href="#DevelSkills" onClick={showNavbar}>Software & Design Expertise</a>
+                <a href="#Projects" onClick={showNavbar}>Projects</a>
+                <a href="#Footer" onClick={showNavbar}>Contact</a>
 
                 <button onClick={showNavbar} className="NavBtn NavBtnClose"><FontAwesomeIcon icon="close"/></button>
             </nav>
