@@ -11,14 +11,16 @@ function DevelSkills() {
     const [develSkills, setSkill] = useState([
         {
             title: "Mobile programming",
-            description: "Building and designing mobile apps using technologies like Kotlin, Dart, Jetpack Compose, " +
+            description: "Building and designing mobile apps from scratch using technologies like Kotlin, Dart, Jetpack Compose, " +
                 "Flutter, Figma, and more.",
             tags: ["Flutter", "Figma", "Jetpack Compose", "Kotlin", "Dart"],
             id: 0
         },
         {
-            title: "Web development",
-            description: "Creating REST applications using JavaScript, HTML, CSS, and React, focusing on user-centered design.",
+            title: "Web Development",
+            description: "Building RESTful applications with JavaScript, " +
+                "HTML, CSS, and React, emphasizing user-centered design. " +
+                "Utilizing HTTP methods, status codes, JSON, and YAML for efficient data communication.",
             id: 1
         },
         {
@@ -33,12 +35,13 @@ function DevelSkills() {
         },
         {
             title: "Cloud technologies",
-            description: "Building scalable and flexible applications using cloud platforms like Google Cloud Platform",
+            description: "Building scalable and flexible applications using cloud platforms like Google Cloud Platform.",
             id: 4
         },
         {
             title: "API integration",
-            description: "Connecting existing APIs to systems and creating new APIs from scratch.",
+            description: "Connecting existing APIs to systems and creating new APIs from scratch with the help of tools like Postman.",
+            tags: ["API", "Postman"],
             id: 5
         },
         {
@@ -81,7 +84,8 @@ function DevelSkills() {
     // Display skills in two columns
     return (
         <div className="DevelSkills" id="DevelSkills">
-            <h2>Software & Design Expertise</h2>
+            <h2 style={{marginBottom: '1%' }}>Software & Design Expertise</h2>
+            <p style={{marginBottom: '2%', marginTop: '0', fontSize: '1.8rem'}}>What I Bring to the Table Beyond Code</p>
             <div style={{
                 display: 'flex',
                 justifyContent: 'space-between',

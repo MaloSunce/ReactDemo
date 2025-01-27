@@ -7,7 +7,7 @@ function AboutMe() {
             <div className="Description">
                 <h2 className="Title">About Me</h2>
                 <img src={Me} alt="Photo of me"></img>
-                <b style={{marginLeft: '20px'}}>Hello, World!</b>
+                <p style={{marginLeft: '20px', fontSize: '1.8rem'}}>Hello, World!</p>
                 <p>
                     My name is Sara Djordjevic, and I am a full-stack developer with a <b>Bachelor's
                     degree in Programming</b> and 4 years of experience in systems development.
