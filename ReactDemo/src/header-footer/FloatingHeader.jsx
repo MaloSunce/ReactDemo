@@ -27,6 +27,7 @@ function FloatingHeader() {
         };
     }, []);
 
+    // Toggles between implemented themes
     const toggleTheme = () => {
         setTheme((prevTheme) => {
             if (prevTheme === 'dark') {
@@ -44,6 +45,7 @@ function FloatingHeader() {
         localStorage.setItem('theme', theme); // Save the theme in localStorage
     }, [theme]);
 
+    // Toggle visibility of responsive NavBar and scroll/no-scroll
     const navRef = useRef();
     const showNavbar = () => {
         navRef.current.classList.toggle("ResponsiveNav");
@@ -56,9 +58,11 @@ function FloatingHeader() {
         }
     }
 
+    // Close NavBar and allow for scroll
     const closeNavBar = () => {
         navRef.current.classList.toggle("ResponsiveNav");
 
+        // Allow scrolling after closing the NavBar
         document.body.classList.remove("no-scroll");
     }
 
