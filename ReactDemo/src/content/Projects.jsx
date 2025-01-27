@@ -12,24 +12,28 @@ function Projects() {
         {
             id: 1,
             title: 'PlantBuddies',
-            description: 'A mobile application developed with Kotlin and Jetpack Compose to search for and read about plants from PerenualAPI.',
+            description: 'PlantBuddies is mobile application developed with Kotlin and Jetpack Compose. ' +
+                'It allows users to search for and read about plants from PerenualAPI in a user friendly and esthetic manner.',
         },
         {
             id: 2,
-            title: 'IceMap',
-            description: 'A system to determine the thickness of the ice on lakes with a ' +
-                'Python server, mobile application developed with Dart and Flutter, and a custom color coded map. ',
+            title: 'MaloSunce',
+            description: 'This website is a personal project developed with ReactJS. This site serves as a small' +
+                ' demonstration of my proficiency in React, as well as way of conveying my other skills in a bit more entertaining way than your' +
+                ' standard resume.',
         },
         {
             id: 3,
-            title: 'MyGamingList',
-            description: 'A website developed with HTML, CSS and JavaScript, with a Go server. ' +
-                'The website retrieves data from the IGDB API and allows users to rate and bookmark various games. ',
+            title: 'IceMap',
+            description: 'IceMap is a system developed to determine the thickness and safety of ice on Norwegian lakes. It comes with a ' +
+                'a Python server, mobile application developed with Dart and Flutter, and a custom color coded map solution.',
         },
         {
             id: 4,
-            title: 'Placeholder',
-            description: ' Placeholder text. Placeholder text. Placeholder text. Placeholder text. Placeholder text. Placeholder text. Placeholder text.',
+            title: 'MyGamingList',
+            description: 'MyGamingList is a website developed with HTML, CSS and JavaScript, alongside a Go server. ' +
+                'The website retrieves data from the IGDB API and allows users to rate and bookmark various games, similar to' +
+                'what IMDB does for movies. ',
         },
     ];
 
@@ -61,14 +65,16 @@ function Projects() {
 
     return (
         <div className="Projects" id="Projects">
-            <h2 style={{paddingTop: '20px'}}>Projects</h2>
+            <h2 style={{ paddingTop: '20px' }}>Projects</h2>
             <Slider {...settings}>
-                {cardItems.map((cardItem) => (
-                    <div className="Card">
-                        <img src={SunLogo} alt="Placeholder image"></img>
+                {cardItems.map((cardItem, index) => (
+                    <div
+                        className={`Card ${index === 1 ? 'Highlighted' : ''}`} // Highlight the project card about this website1
+                        style={index === 1 ? { backgroundColor: 'lightblue' } : {}}>
+                        <img src={SunLogo} alt="Placeholder image" />
                         <div className="CardInfo">
                             <h3>{cardItem.title}</h3>
-                            <p>{cardItem.description}</p>
+                            <p style={{marginTop: '5px'}}>{cardItem.description}</p>
                         </div>
                         <button className="ReadMoreBtn">Read more</button>
                     </div>

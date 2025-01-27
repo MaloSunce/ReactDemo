@@ -56,12 +56,21 @@
     flex-direction: column;
 }
 
+.CardInfo p {
+    text-align: justify;
+    text-justify: initial;
+}
+
 .ReadMoreBtn {
     width: 150px;
-    margin: 20px auto;
+    margin: 5px auto 10px;
     color: var(--text-secondary);
     border: 2px solid var(--text-secondary);
     border-radius: 20px;
     background-color: Transparent;
     padding: 5px;
+}
+
+.Highlighted {
+    background-color: var(--primary-container);
 }
