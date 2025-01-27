@@ -56,6 +56,12 @@ function FloatingHeader() {
         }
     }
 
+    const closeNavBar = () => {
+        navRef.current.classList.toggle("ResponsiveNav");
+
+        document.body.classList.remove("no-scroll");
+    }
+
     return (
         <header className="FloatingHeader">
             <div className="LogoContainer">
@@ -67,11 +73,11 @@ function FloatingHeader() {
                 />
             </div>
             <nav className="Nav" ref={navRef}>
-                <a href="#AboutMe" onClick={showNavbar}>About me</a>
-                <a href="#TechSkills" onClick={showNavbar}>Technical skills</a>
-                <a href="#DevelSkills" onClick={showNavbar}>Software & Design Expertise</a>
-                <a href="#Projects" onClick={showNavbar}>Projects</a>
-                <a href="#Footer" onClick={showNavbar}>Contact</a>
+                <a href="#AboutMe" onClick={closeNavBar}>About me</a>
+                <a href="#TechSkills" onClick={closeNavBar}>Technical skills</a>
+                <a href="#DevelSkills" onClick={closeNavBar}>Software & Design Expertise</a>
+                <a href="#Projects" onClick={closeNavBar}>Projects</a>
+                <a href="#Footer" onClick={closeNavBar}>Contact</a>
 
                 <button onClick={showNavbar} className="NavBtn NavBtnClose"><FontAwesomeIcon icon="close"/></button>
             </nav>
