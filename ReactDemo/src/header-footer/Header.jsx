@@ -48,11 +48,11 @@ function Header() {
 
                 <div style={{display: 'flex', gap: '1.7em', paddingRight: '2%'}}>
                     <a href="https://github.com/MaloSunce?tab=repositories" target="_blank">
-                        <img className="Icons" src={GitHubLogo} alt="GitHub logo"></img>
+                        <img className="Icons" src={GitHubLogo} alt="GitHub logo" style={{margin: '0'}}></img>
                         {/*<dir className="Logo"><img src="../assets/sun.png" alt="Sun Icon"> </img></dir>*/}
                     </a>
                     <a href="https://www.linkedin.com/in/sara-djordjevic-2b0ab925b/" target="_blank">
-                        <img className="Icons" src={LinkedInLogo} alt="LinkedIn logo"></img>
+                        <img className="Icons" src={LinkedInLogo} alt="LinkedIn logo" style={{margin: '0'}}></img>
                         {/*<a href="https://www.flaticon.com/free-icons/brightness" title="brightness icons">Brightness icons created by Cap Cool - Flaticon</a>*/}
                     </a>
                 </div>
