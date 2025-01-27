@@ -1,6 +1,4 @@
 import SunLogo from "../assets/sun.png";
-import GitHubLogo from "../assets/github.png";
-import LinkedInLogo from "../assets/linkedin.png";
 
 import {library} from '@fortawesome/fontawesome-svg-core'
 import {faSun, faMoon, faBars, faClose} from '@fortawesome/free-solid-svg-icons'
@@ -62,7 +60,11 @@ function FloatingHeader() {
         <header className="FloatingHeader">
             <div className="LogoContainer">
                 <h1 style={{fontSize: '1.6em'}}><a href="#">MaloSunce</a></h1>
-                <img src={SunLogo} alt="Sun logo" title="Brightness icons created by Cap Cool - Flaticon"/>
+                <img src={SunLogo}
+                     alt="Sun logo"
+                     title="Brightness icons created by Cap Cool - Flaticon"
+                     style={{margin: '0'}}
+                />
             </div>
             <nav className="Nav" ref={navRef}>
                 <a href="#AboutMe" onClick={showNavbar}>About me</a>

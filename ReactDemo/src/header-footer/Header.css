@@ -23,7 +23,7 @@ h1 {
 
 .LogoContainer {
     grid-area: title;
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     align-items: center;
     height: 35%;
@@ -32,8 +32,7 @@ h1 {
 .SmallLogo {
     width: 2rem;
     height: 2rem;
-    margin-bottom: 3%;
-    margin-left: 0 !important;
+    margin: 0 !important;
 }
 
 .SunLogo {
