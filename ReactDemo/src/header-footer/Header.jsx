@@ -21,6 +21,14 @@ function Header() {
         }
     }
 
+    // Close NavBar and allow for scroll
+    const closeNavBar = () => {
+        navRef.current.classList.toggle("ResponsiveNav");
+
+        // Allow scrolling after closing the NavBar
+        document.body.classList.remove("no-scroll");
+    }
+
     return (
         <header className="Header">
             <div className="LogoContainer">
@@ -32,11 +40,11 @@ function Header() {
                 />
             </div>
             <nav className="Nav" ref={navRef}>
-                <a href="#AboutMe">About me</a>
-                <a href="#TechSkills">Technical skills</a>
-                <a href="#DevelSkills">Software & Design Expertise</a>
-                <a href="#Projects">Projects</a>
-                <a href="#Footer">Contact</a>
+                <a href="#AboutMe" onClick={closeNavBar}>About me</a>
+                <a href="#TechSkills" onClick={closeNavBar}>Technical skills</a>
+                <a href="#DevelSkills" onClick={closeNavBar}>Software & Design Expertise</a>
+                <a href="#Projects" onClick={closeNavBar}>Projects</a>
+                <a href="#Footer" onClick={closeNavBar}>Contact</a>
 
                 <div style={{display: 'flex', gap: '1.7em', paddingRight: '2%'}}>
                     <a href="https://github.com/MaloSunce?tab=repositories" target="_blank">
