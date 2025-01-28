@@ -7,13 +7,14 @@
     color: var(--text-primary);
 }
 
-.ContactInfo h3, .ContactInfo p {
-    margin-top: 0;
+.ContactInfo p {
+    margin: 10px;
+    text-wrap: nowrap;
 }
 
 .ContactInfo h3 {
     font-size: 1.5em;
-    margin-bottom: 5px;
+    margin: 0 5% auto 5px;
     color: var(--text-secondary);
 }
 
@@ -21,7 +22,29 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
-    width: 50%;
+    justify-content: start;
+    width: 100%;
     padding-bottom: 10px;
+    transition: 1s ease;
 }
+
+.IconTitlePair {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+
+.TitleLink {
+    margin-right: 5%;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .ContactInfo {
+        flex-direction: column !important;
+        justify-content: center !important;
+        transition: 1s ease;
+    }
+}
+

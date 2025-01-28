@@ -15,36 +15,35 @@ function Footer() {
             <h2 style={{marginLeft: '3%'}}>Contact</h2>
             <div className="ContactInfo">
                 <div className="TitleLink">
-                    <div style={{display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "start"}}>
-                        <h3 style={{margin: "0 8%"}}>Email</h3>
+                    <div className="IconTitlePair">
+                        <h3>Email</h3>
                     </div>
                     <p>sa.djoo@yahoo.com</p>
                 </div>
                 <div className="TitleLink">
-                    <div style={{display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "start"}}>
-                        <h3 style={{margin: "0 8%"}}>Phone</h3>
+                    <div className="IconTitlePair">
+                        <h3>Phone</h3>
                     </div>
                     <p>+47 94 19 79 77</p>
                 </div>
                 <div className="TitleLink">
-                    <div style={{display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "start"}}>
+                    <div className="IconTitlePair">
 
                         <img className="Icons" src={GitHubLogo} alt="GitHub logo"
                              style={{margin: '0', width: "1.8rem" ,height: "1.8rem"}}></img>
                         {/*<dir className="Logo"><img src="../assets/sun.png" alt="Sun Icon"> </img></dir>*/}
 
-                        <h3 style={{margin: "0 8%"}}>GitHub</h3>
+                        <h3>GitHub</h3>
                     </div>
                     <p><a href="https://github.com/MaloSunce?tab=repositories" target="_blank">/MaloSunce</a></p>
                 </div>
                 <div className="TitleLink">
-                    <div style={{display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "start"}}>
-
+                    <div className="IconTitlePair">
                         <img className="Icons" src={LinkedInLogo} alt="LinkedIn logo"
                              style={{margin: '0', width: "1.8rem", height: "1.8rem"}}></img>
                         {/*<a href="https://www.flaticon.com/free-icons/brightness" title="brightness icons">Brightness icons created by Cap Cool - Flaticon</a>*/}
 
-                        <h3 style={{margin: "0 5%"}}>LinkedIn</h3>
+                        <h3>LinkedIn</h3>
                     </div>
                     <p><a href="https://www.linkedin.com/in/sara-djordjevic-2b0ab925b/"
                           target="_blank">/Sara-Djordjevic</a></p>
