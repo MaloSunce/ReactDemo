@@ -18,7 +18,7 @@ function Projects() {
         {
             id: 2,
             title: 'MaloSunce',
-            description: 'This website is a personal project developed with ReactJS. This site serves as a small' +
+            description: 'This website is a personal project developed with React. This site serves as a small' +
                 ' demonstration of my proficiency in React, as well as way of conveying my other skills in a bit more entertaining way than your' +
                 ' standard resume.',
         },
